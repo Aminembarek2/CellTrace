@@ -1,0 +1,7 @@
+model_id,arm,role,tool,requests,cache_hits,errors,executions
+deepseek/deepseek-v4.1-flash,investigator_gated,investigator,compare_windows,69,0,34,59
+deepseek/deepseek-v4.1-flash,investigator_gated,investigator,get_activity_state,107,0,0,107
+deepseek/deepseek-v4.1-flash,investigator_gated,investigator,get_cell_transitions,27,0,0,27
+deepseek/deepseek-v4.1-flash,investigator_gated,investigator,get_metric_definition,15,0,0,15
+deepseek/deepseek-v4.1-flash,investigator_gated,investigator,get_session_context,27,0,0,27
+deepseek/deepseek-v4.1-flash,investigator_gated,investigator,summarize_window,113,0,7,106

@@ -1,0 +1,14 @@
+{
+  "source_id": "raca_irish_5g",
+  "repository": "https://github.com/uccmisl/5Gdataset",
+  "repository_commit": "306d92eba81cb4f1195d8b8eba625666a02a10ec",
+  "download_urls": {
+    "5G-production-dataset.zip": "https://raw.githubusercontent.com/uccmisl/5Gdataset/306d92eba81cb4f1195d8b8eba625666a02a10ec/5G-production-dataset.zip"
+  },
+  "files": {
+    "5G-production-dataset.zip": {
+      "bytes": 2177094,
+      "sha256": "abc729d696b5e0ba34a9c6ed35a851f2868d2b5071be5efb8a49691c23bb1a9b"
+    }
+  }
+}

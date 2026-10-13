@@ -1,0 +1,22 @@
+{
+  "accuracy": null,
+  "active_seconds": 1915.348,
+  "attempted_candidates": 18,
+  "checked_drop_reports": 16,
+  "dispatch_status": "finished",
+  "independently_checked_reports": 16,
+  "known_or_reserved_usd": 0.276977664,
+  "limitation": "No incident truth labels; verified facts do not establish physical cause or semantic accuracy. Scripted results measure orchestration only.",
+  "maximum_estimated_usd": 0.99794326,
+  "mode": "live",
+  "nonempty_fact_checked_reports": 16,
+  "outcomes": {
+    "completed": 16,
+    "exhausted": 2
+  },
+  "provider_attempts": 181,
+  "recorded_candidates": 18,
+  "selected_candidates": 18,
+  "unknown_usage_attempts": 0,
+  "verified_claims": 290
+}

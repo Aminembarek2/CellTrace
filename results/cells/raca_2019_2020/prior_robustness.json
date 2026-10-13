@@ -1,0 +1,73 @@
+{
+ "cells": 48,
+ "visit_counts": [
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  4,
+  4,
+  4,
+  4,
+  4,
+  4,
+  4,
+  5,
+  5,
+  5,
+  6,
+  6,
+  6,
+  6,
+  6,
+  7,
+  7,
+  7,
+  7,
+  7,
+  8,
+  8,
+  8,
+  8,
+  8,
+  9,
+  10
+ ],
+ "results": {
+  "normal": {
+   "mean_realised_false_discovery_proportion": 0.04637063492063492,
+   "mean_power": 0.20555445951107715,
+   "mean_selected": 1.608,
+   "share_archives_between_variance_zero": 0.0
+  },
+  "two_point": {
+   "mean_realised_false_discovery_proportion": 0.018779845154845154,
+   "mean_power": 0.7630352342549923,
+   "mean_selected": 4.059,
+   "share_archives_between_variance_zero": 0.002
+  },
+  "skewed": {
+   "mean_realised_false_discovery_proportion": 0.03839920634920634,
+   "mean_power": 0.38584850566100565,
+   "mean_selected": 2.647,
+   "share_archives_between_variance_zero": 0.0
+  }
+ }
+}

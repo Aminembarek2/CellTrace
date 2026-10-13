@@ -1,0 +1,79 @@
+{
+  "errors": {
+    "capacity_conflation": {
+      "conversations": 36,
+      "conversations_located": 34,
+      "distinct_findings": 12,
+      "every_draw_rate_interval_95": [
+        0.5159,
+        0.9791
+      ],
+      "findings_located_in_any_draw": 12,
+      "findings_located_in_every_draw": 10,
+      "wordings": [
+        "new",
+        "original"
+      ]
+    },
+    "correct_control": {
+      "conversations": 24,
+      "distinct_reports": 6,
+      "false_alarm_rate_interval_95": [
+        0.0,
+        0.4593
+      ],
+      "reports_never_challenged": 6
+    },
+    "physical_cause": {
+      "conversations": 36,
+      "conversations_located": 36,
+      "distinct_findings": 12,
+      "every_draw_rate_interval_95": [
+        0.7354,
+        1.0
+      ],
+      "findings_located_in_any_draw": 12,
+      "findings_located_in_every_draw": 12,
+      "wordings": [
+        "new",
+        "original"
+      ]
+    },
+    "radio_exclusion": {
+      "conversations": 12,
+      "conversations_located": 1,
+      "distinct_findings": 6,
+      "every_draw_rate_interval_95": [
+        0.0,
+        0.4593
+      ],
+      "findings_located_in_any_draw": 1,
+      "findings_located_in_every_draw": 0,
+      "wordings": [
+        "original"
+      ]
+    },
+    "window_scope": {
+      "conversations": 36,
+      "conversations_located": 20,
+      "distinct_findings": 12,
+      "every_draw_rate_interval_95": [
+        0.0992,
+        0.6511
+      ],
+      "findings_located_in_any_draw": 11,
+      "findings_located_in_every_draw": 4,
+      "wordings": [
+        "new",
+        "original"
+      ]
+    }
+  },
+  "method": "distinct finding as unit, exact Clopper-Pearson 95% intervals",
+  "ninety_percent_bar": "With every finding located, a lower bound above 0.90 needs at least 36 distinct findings.",
+  "studies": {
+    "study_2": "artifacts/private/final_evaluation_20261010/planted",
+    "study_3": "artifacts/private/final_evaluation_20261011/planted_v3"
+  },
+  "unit_note": "Six bases from two reused development sessions. Study 2 and study 3 reuse the original wordings on the same bases, so their conversations are repeated measures."
+}

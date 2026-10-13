@@ -1,0 +1,12 @@
+# Allow list: the image needs only the package, its lock and the default configuration.
+# Credentials, datasets, private artifacts and the local virtual environment stay out.
+*
+!pyproject.toml
+!uv.lock
+!README.md
+!LICENSE
+!THIRD_PARTY_NOTICES.md
+!src/
+!configs/
+**/__pycache__
+**/*.py[cod]

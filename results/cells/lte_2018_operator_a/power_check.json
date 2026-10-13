@@ -1,0 +1,18 @@
+{
+  "snapshot": "data/processed/raca_lte_2018/snap_9d72a393002cef75",
+  "mobilities": [
+    "car"
+  ],
+  "visits": 472,
+  "cells_on_two_or_more_days": 42,
+  "within_variance": 0.12092532411697275,
+  "between_variance": 0.0782966337235852,
+  "simulations": 500,
+  "permutations": 199,
+  "power": 0.986,
+  "power_interval_95": [
+    0.9713865738597492,
+    0.9932022969282127
+  ],
+  "underpowered": false
+}

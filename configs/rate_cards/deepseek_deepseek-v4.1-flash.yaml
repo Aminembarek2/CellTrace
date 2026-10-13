@@ -1,0 +1,16 @@
+model_id: deepseek/deepseek-v4.1-flash
+provider_slug: deepseek
+currency: USD
+unit: per_million_tokens
+input: 0.3
+output: 1.2
+cache_read: 0.006
+cache_write_5m: 0.0
+cache_write_1h: 0.0
+tool_use_system_prompt_tokens_auto: 0
+source_url: https://openrouter.ai/api/v1/models/deepseek/deepseek-v4.1-flash/endpoints
+checked_date: '2026-10-08'
+cache_treatment: Prompt tokens include cached tokens. Completion tokens include reasoning.
+  No explicit cache creation is requested.
+extra_charges: Text and client tools only. No hosted search. Maximum advertised prices
+  include endpoint variants and time dependent overrides. Known response cost is authoritative.

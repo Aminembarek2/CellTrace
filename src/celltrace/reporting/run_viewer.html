@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CellTrace Run Viewer</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --surface-raised: #ffffff;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #66645e;
+  --grid: #e1e0d9;
+  --axis: #77756e;
+  --border: rgba(11, 11, 11, 0.10);
+  --selected: #e8f0fb;
+  --series-1: #2568b8;
+  --series-2: #ba4b20;
+  --series-3: #087e58;
+  --good: #006300;
+  --good-text: #006300;
+  --warning: #fab219;
+  --serious: #ec835a;
+  --critical: #d03b3b;
+  --font: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --surface-raised: #222220;
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted: #aaa89f;
+    --grid: #2c2c2a;
+    --axis: #85837b;
+    --border: rgba(255, 255, 255, 0.10);
+    --selected: #1c2c42;
+    --series-1: #3987e5;
+    --series-2: #f28a60;
+    --series-3: #53c99e;
+    --good-text: #74d994;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --surface-raised: #222220;
+  --text-primary: #ffffff;
+  --text-secondary: #c3c2b7;
+  --text-muted: #aaa89f;
+  --grid: #2c2c2a;
+  --axis: #85837b;
+  --border: rgba(255, 255, 255, 0.10);
+  --selected: #1c2c42;
+  --series-1: #3987e5;
+  --series-2: #f28a60;
+  --series-3: #53c99e;
+  --good-text: #74d994;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text-primary);
+  font: 14px/1.45 var(--font);
+}
+main { max-width: 1440px; margin: 0 auto; padding: 20px 16px 48px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; margin-bottom: 16px; }
+h1 { font-size: 20px; margin: 0; }
+h2 { font-size: 15px; margin: 0 0 10px; }
+h3 { font-size: 13px; margin: 16px 0 8px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+.muted { color: var(--text-muted); }
+.secondary { color: var(--text-secondary); }
+.mono { font-family: var(--mono); font-size: 12px; }
+.badge { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--border); border-radius: 999px; padding: 2px 10px; font-size: 12px; color: var(--text-secondary); background: var(--surface); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-muted); }
+.dot.live { background: var(--good); }
+.dot.stale { background: var(--warning); }
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 14px; }
+.tile { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; }
+.tile .label { font-size: 12px; color: var(--text-secondary); }
+.tile .value { font-size: 22px; font-weight: 600; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+button, select, input[type="search"] { font: inherit; color: var(--text-primary); background: var(--surface-raised); border: 1px solid var(--axis); border-radius: 6px; padding: 5px 8px; }
+input[type="search"] { min-width: 220px; flex: 1; max-width: 360px; }
+button { cursor: pointer; }
+input::placeholder { color: var(--text-muted); opacity: 1; }
+button.link { font: inherit; text-align: inherit; border: 0; background: transparent; padding: 0; }
+:focus-visible { outline: 2px solid var(--series-1); outline-offset: 3px; }
+#store-label { overflow-wrap: anywhere; min-width: 0; }
+.panel, .columns > *, .scroll { min-width: 0; }
+.scroll { overflow-x: auto; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; white-space: nowrap; }
+th { font-size: 12px; color: var(--text-secondary); font-weight: 600; cursor: default; position: sticky; top: 0; background: var(--surface); }
+th.sortable { cursor: pointer; }
+th.sorted::after { content: " ▾"; }
+th.sorted.ascending::after { content: " ▴"; }
+td.number, th.number { text-align: right; }
+td.wrap { white-space: normal; min-width: 240px; }
+tbody tr.clickable { cursor: pointer; }
+tbody tr.clickable:hover { background: var(--selected); }
+tbody tr.selected { background: var(--selected); }
+.status { display: inline-flex; align-items: center; gap: 5px; }
+.status .icon { font-size: 11px; width: 14px; height: 14px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 700; }
+.icon.good { background: var(--good); }
+.icon.warning { background: var(--warning); color: #0b0b0b; }
+.icon.serious { background: var(--serious); color: #0b0b0b; }
+.icon.critical { background: var(--critical); }
+.icon.neutral { background: var(--text-muted); }
+.columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 10px; }
+.meters { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px 18px; }
+.meter .row { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-secondary); }
+.meter .track { height: 8px; border-radius: 4px; background: var(--grid); overflow: hidden; margin-top: 3px; }
+.meter .fill { height: 100%; border-radius: 4px; background: var(--series-1); }
+.meter .fill.warning { background: var(--warning); }
+.meter .fill.critical { background: var(--critical); }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--text-secondary); margin: 6px 0; }
+.legend .swatch { display: inline-block; width: 12px; height: 8px; border-radius: 2px; margin-right: 5px; vertical-align: middle; }
+#timeline svg { display: block; width: 100%; }
+.tooltip { position: fixed; pointer-events: none; z-index: 10; max-width: 380px; background: var(--surface-raised); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18); display: none; }
+.expanded td { background: var(--page); white-space: normal; }
+pre { margin: 6px 0; white-space: pre-wrap; word-break: break-word; font-family: var(--mono); font-size: 12px; color: var(--text-secondary); }
+.empty { color: var(--text-muted); padding: 10px 0; }
+.note { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+@media (max-width: 640px) {
+  .columns { grid-template-columns: 1fr; }
+  input[type="search"] { min-width: 0; max-width: none; }
+}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>CellTrace run viewer</h1>
+    <span class="badge"><span class="dot" id="mode-dot"></span><span id="mode-label"></span></span>
+    <span class="muted mono" id="store-label"></span>
+  </header>
+  <button id="pause-refresh" type="button" hidden aria-pressed="false">Pause updates</button>
+  <p class="note" id="refresh-status" role="status" aria-live="polite"></p>
+  <section class="tiles" id="tiles" aria-label="Totals"></section>
+  <section class="panel">
+    <h2>Runs</h2>
+    <div class="filters">
+      <select id="filter-arm" aria-label="Arm"></select>
+      <select id="filter-outcome" aria-label="Outcome"></select>
+      <input type="search" id="filter-text" placeholder="Search run, case or terminal reason" aria-label="Search">
+    </div>
+    <div class="scroll"><table id="runs-table"></table></div>
+    <p class="note">Select a run to inspect its timeline, budget, evidence and review. Completion describes the workflow; fact checks and causal status are separate.</p>
+  </section>
+  <section id="detail"></section>
+  <section class="columns">
+    <div class="panel"><h2>Failures and unfinished actions</h2><div class="scroll" id="failures"></div></div>
+    <div class="panel"><h2>Tool usage</h2><div class="scroll" id="tools"></div></div>
+  </section>
+</main>
+<div class="tooltip" id="tooltip" role="status"></div>
+<script type="application/json" id="viewer-data">__VIEWER_DATA__</script>
+<script>
+"use strict";
+const embedded = JSON.parse(document.getElementById("viewer-data").textContent);
+const state = {
+  overview: embedded.overview || null,
+  details: embedded.details || {},
+  selectedRunId: null,
+  sortKey: "created_at",
+  sortAscending: false,
+  expandedSteps: new Set(),
+  lastRefresh: null,
+  paused: false,
+  refreshing: false,
+  refreshError: null,
+};
+const LIVE = embedded.mode === "live";
+const KIND_COLORS = { provider_attempt: "var(--series-1)", tool_request: "var(--series-2)", verification_query: "var(--series-3)" };
+const KIND_LABELS = { provider_attempt: "Model call", tool_request: "Tool request", verification_query: "Code verification" };
+const LANES = ["investigator", "reviewer", "verifier"];
+
+function element(tag, attributes, children) {
+  const node = document.createElement(tag);
+  for (const [name, value] of Object.entries(attributes || {})) {
+    if (value === null || value === undefined || value === false) continue;
+    if (name === "class") node.className = value;
+    else if (name === "text") node.textContent = value;
+    else if (name.startsWith("on")) node.addEventListener(name.slice(2), value);
+    else node.setAttribute(name, value === true ? "" : value);
+  }
+  for (const child of [].concat(children || [])) {
+    if (child === null || child === undefined) continue;
+    node.append(child instanceof Node ? child : document.createTextNode(String(child)));
+  }
+  return node;
+}
+
+function svgElement(tag, attributes) {
+  const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
+  for (const [name, value] of Object.entries(attributes || {})) node.setAttribute(name, value);
+  return node;
+}
+
+function formatNumber(value, digits) {
+  if (value === null || value === undefined) return "n/a";
+  return Number(value).toLocaleString(undefined, { maximumFractionDigits: digits ?? 0, minimumFractionDigits: digits ?? 0 });
+}
+
+function formatDuration(milliseconds, span) {
+  if (span < 2000) return formatNumber(milliseconds) + " ms";
+  return formatNumber(milliseconds / 1000, span < 20000 ? 1 : 0) + " s";
+}
+
+function formatWindow(window) {
+  return window ? "[" + formatNumber(window.start_ms) + ", " + formatNumber(window.end_ms) + ") ms" : "?";
+}
+
+function formatUsd(value) { return value === null || value === undefined ? "n/a" : "$" + Number(value).toFixed(4); }
+
+function statusTone(value) {
+  if (!value) return ["neutral", "·"];
+  if (["completed", "passed", "accept", "accepted", "terminal"].includes(value)) return ["good", "✓"];
+  if (["partial", "revision_requested", "revise", "incomplete", "not_run"].includes(value)) return ["warning", "!"];
+  if (["exhausted", "uncertain"].includes(value)) return ["serious", "!"];
+  if (["failed", "error", "rejected"].includes(value)) return ["critical", "✕"];
+  return ["neutral", "·"];
+}
+
+function statusLabel(value, text) {
+  const [tone, glyph] = statusTone(value);
+  return element("span", { class: "status" }, [
+    element("span", { class: "icon " + tone, "aria-hidden": "true", text: glyph }),
+    text ?? value ?? "none",
+  ]);
+}
+
+function runOutcome(run) {
+  if (run.status !== "terminal") return run.active_actions > 0 ? "running" : run.status;
+  return run.workflow_outcome || "unknown";
+}
+
+function renderHeader() {
+  const dot = document.getElementById("mode-dot");
+  const label = document.getElementById("mode-label");
+  if (LIVE) {
+    const seconds = state.lastRefresh ? Math.round((Date.now() - state.lastRefresh) / 1000) : null;
+    dot.className = "dot " + (seconds !== null && seconds < 10 ? "live" : "stale");
+    if (state.paused || state.refreshError) dot.className = "dot stale";
+    label.textContent = state.paused ? "Live updates paused" : state.refreshError ? "Live connection failed" : state.lastRefresh ? "Live, refreshed " + new Date(state.lastRefresh).toLocaleTimeString() : "Live, connecting";
+  } else {
+    dot.className = "dot";
+    label.textContent = "Snapshot written by celltrace runs view";
+  }
+  document.getElementById("refresh-status").textContent = state.refreshError
+    ? "Refresh failed. Showing the last received data; retrying when updates are enabled."
+    : LIVE ? (state.paused ? "Updates paused for inspection. Resume to read new records." : "Reads committed records every 2 seconds. Each response uses one database snapshot.") : "Saved ledger snapshot. Scripted fixture runs do not measure model performance.";
+  document.getElementById("store-label").textContent = embedded.store || "";
+}
+
+function renderTiles() {
+  const tiles = document.getElementById("tiles");
+  tiles.replaceChildren();
+  const runs = state.overview ? state.overview.runs : [];
+  const outcomes = {};
+  for (const run of runs) outcomes[runOutcome(run)] = (outcomes[runOutcome(run)] || 0) + 1;
+  const sum = (key) => runs.reduce((total, run) => total + (Number(run[key]) || 0), 0);
+  const entries = [
+    ["Runs", formatNumber(runs.length)],
+    ["Completed", formatNumber(outcomes.completed || 0)],
+    ["Partial or exhausted", formatNumber((outcomes.partial || 0) + (outcomes.exhausted || 0))],
+    ["Running", formatNumber((outcomes.running || 0))],
+    ["Known or reserved USD", formatUsd(sum("estimated_usd"))],
+    ["Failed actions", formatNumber(sum("failed_actions"))],
+    ["Unknown usage attempts", formatNumber(sum("unknown_usage_attempts"))],
+  ];
+  for (const [label, value] of entries) {
+    tiles.append(element("div", { class: "tile" }, [element("div", { class: "label", text: label }), element("div", { class: "value", text: value })]));
+  }
+}
+
+function fillSelect(select, label, values) {
+  const current = select.value;
+  select.replaceChildren(element("option", { value: "", text: label }));
+  for (const value of values) select.append(element("option", { value, text: value }));
+  if (values.includes(current)) select.value = current;
+}
+
+function renderFilters() {
+  const runs = state.overview ? state.overview.runs : [];
+  fillSelect(document.getElementById("filter-arm"), "All arms", [...new Set(runs.map((run) => run.arm))].sort());
+  fillSelect(document.getElementById("filter-outcome"), "All outcomes", [...new Set(runs.map(runOutcome))].sort());
+}
+
+const RUN_COLUMNS = [
+  ["run_id", "Run", (run) => element("button", { type: "button", class: "link mono", id: "select-" + run.run_id, text: run.run_id })],
+  ["arm", "Arm", (run) => run.arm],
+  ["outcome", "Outcome", (run) => statusLabel(runOutcome(run))],
+  ["terminal_reason", "Terminal reason", (run) => run.terminal_reason || ""],
+  ["provider_attempts", "Model calls", (run) => formatNumber(run.provider_attempts), true],
+  ["tool_requests", "Tool requests", (run) => formatNumber(run.tool_requests), true],
+  ["failed_actions", "Failed actions", (run) => formatNumber(run.failed_actions), true],
+  ["review_rounds", "Review rounds", (run) => formatNumber(run.review_rounds), true],
+  ["failed_verifications", "Failed checks", (run) => run.verification_rounds ? formatNumber(run.failed_verifications) + " of " + formatNumber(run.verification_rounds) : "not run", true],
+  ["verified_claims", "Verified claims", (run) => run.verified_claims === null ? "n/a" : formatNumber(run.verified_claims), true],
+  ["estimated_usd", "USD", (run) => formatUsd(run.estimated_usd), true],
+  ["active_ms", "Active s", (run) => formatNumber(run.active_ms / 1000, 1), true],
+];
+
+function filteredRuns() {
+  const runs = state.overview ? state.overview.runs.slice() : [];
+  const arm = document.getElementById("filter-arm").value;
+  const outcome = document.getElementById("filter-outcome").value;
+  const text = document.getElementById("filter-text").value.trim().toLowerCase();
+  const kept = runs.filter((run) => (!arm || run.arm === arm) && (!outcome || runOutcome(run) === outcome)
+    && (!text || [run.run_id, run.case_id, run.terminal_reason].join(" ").toLowerCase().includes(text)));
+  const key = state.sortKey;
+  const value = (run) => key === "outcome" ? runOutcome(run) : run[key];
+  kept.sort((first, second) => {
+    const left = value(first), right = value(second);
+    const order = typeof left === "number" && typeof right === "number" ? left - right : String(left ?? "").localeCompare(String(right ?? ""));
+    return state.sortAscending ? order : -order;
+  });
+  return kept;
+}
+
+function renderRuns() {
+  const table = document.getElementById("runs-table");
+  const header = element("tr", {}, RUN_COLUMNS.map(([key, label, , numeric]) => element("th", {
+    class: ["sortable", numeric ? "number" : "", state.sortKey === key ? "sorted" : "", state.sortKey === key && state.sortAscending ? "ascending" : ""].join(" "),
+    scope: "col",
+    "aria-sort": state.sortKey === key ? (state.sortAscending ? "ascending" : "descending") : "none",
+  }, element("button", { type: "button", class: "link", id: "sort-" + key,
+    onclick: () => { state.sortAscending = state.sortKey === key ? !state.sortAscending : false; state.sortKey = key; renderRuns(); document.getElementById("sort-" + key)?.focus(); },
+    text: label,
+  }))));
+  const rows = filteredRuns().map((run) => element("tr", {
+    class: "clickable" + (run.run_id === state.selectedRunId ? " selected" : ""),
+    onclick: () => selectRun(run.run_id),
+  }, RUN_COLUMNS.map(([, , render, numeric]) => element("td", { class: numeric ? "number" : "" }, render(run)))));
+  table.replaceChildren(element("thead", {}, header), element("tbody", {}, rows.length ? rows : element("tr", {}, element("td", { class: "empty", colspan: RUN_COLUMNS.length, text: "No run matches the filters." }))));
+}
+
+function simpleTable(columns, rows, emptyText) {
+  if (!rows.length) return element("p", { class: "empty", text: emptyText });
+  return element("table", {}, [
+    element("thead", {}, element("tr", {}, columns.map(([label, , numeric]) => element("th", { class: numeric ? "number" : "", text: label })))),
+    element("tbody", {}, rows.map((row) => element("tr", {}, columns.map(([, render, numeric]) => element("td", { class: numeric ? "number" : "" }, render(row)))))),
+  ]);
+}
+
+function renderAggregates() {
+  const overview = state.overview || { failures: [], tools: [] };
+  document.getElementById("failures").replaceChildren(simpleTable([
+    ["Role", (row) => row.role], ["Kind", (row) => KIND_LABELS[row.kind] || row.kind], ["Tool", (row) => row.tool_name],
+    ["State", (row) => statusLabel(row.state)], ["Code", (row) => element("span", { class: "mono", text: row.error_code })],
+    ["Count", (row) => formatNumber(row.count), true], ["Runs", (row) => formatNumber(row.runs), true],
+  ], overview.failures, "No failed or unfinished action."));
+  document.getElementById("tools").replaceChildren(simpleTable([
+    ["Role", (row) => row.role], ["Tool", (row) => element("span", { class: "mono", text: row.tool_name })],
+    ["Requests", (row) => formatNumber(row.requests), true], ["Cache hits", (row) => formatNumber(row.cache_hits), true],
+    ["Failed", (row) => formatNumber(row.failed), true], ["Mean ms", (row) => formatNumber(row.mean_duration_ms, 1), true],
+  ], overview.tools, "No tool request recorded."));
+}
+
+function meter(entry) {
+  const fraction = entry.limit ? entry.used / entry.limit : 0;
+  const tone = fraction >= 1 ? "critical" : fraction >= 0.9 ? "warning" : "";
+  const isUsd = entry.name.includes("USD");
+  const used = isUsd ? formatUsd(entry.used) : formatNumber(entry.used);
+  const limit = entry.limit === null || entry.limit === undefined ? "no limit" : isUsd ? formatUsd(entry.limit) : formatNumber(entry.limit);
+  return element("div", { class: "meter" }, [
+    element("div", { class: "row" }, [element("span", { text: entry.name }), element("span", { text: used + " of " + limit + (fraction >= 1 ? " (reached)" : "") })]),
+    element("div", { class: "track", role: "img", "aria-label": entry.name + " " + Math.round(fraction * 100) + " percent of limit" }, element("div", { class: "fill " + tone, style: "width:" + Math.min(100, fraction * 100).toFixed(1) + "%" })),
+  ]);
+}
+
+function showTooltip(event, lines) {
+  const tooltip = document.getElementById("tooltip");
+  tooltip.replaceChildren(...lines.map((line, index) => element("div", { class: index ? "secondary" : "", text: line })));
+  tooltip.style.display = "block";
+  const x = Math.min(event.clientX + 14, window.innerWidth - tooltip.offsetWidth - 8);
+  const y = Math.min(event.clientY + 14, window.innerHeight - tooltip.offsetHeight - 8);
+  tooltip.style.left = x + "px";
+  tooltip.style.top = y + "px";
+}
+
+function hideTooltip() { document.getElementById("tooltip").style.display = "none"; }
+
+function stepName(step) {
+  if (step.kind === "tool_request") return step.tool_name || "tool";
+  if (step.kind === "provider_attempt") return "turn " + (step.turn ?? "?") + (step.stop_reason ? ", " + step.stop_reason : "");
+  return step.description || "verification";
+}
+
+function stepTooltip(step) {
+  const lines = [KIND_LABELS[step.kind] + ": " + stepName(step), step.role + ", " + step.state + ", start " + formatNumber(step.offset_ms / 1000, 2) + " s, " + formatNumber(step.duration_ms) + " ms"];
+  if (step.kind === "provider_attempt") lines.push(formatNumber(step.input_tokens) + " input and " + formatNumber(step.output_tokens) + " output tokens, " + formatUsd(step.usd));
+  if (step.tool_calls && step.tool_calls.length) lines.push("Requested: " + step.tool_calls.join(", "));
+  if (step.error_code) lines.push("Error " + step.error_code + (step.error_message ? ": " + step.error_message : ""));
+  if (step.cache_hit) lines.push("Served from the run's evidence cache");
+  return lines;
+}
+
+function renderTimeline(container, detail) {
+  const steps = detail.steps;
+  if (!steps.length) { container.replaceChildren(element("p", { class: "empty", text: "No action recorded yet." })); return; }
+  const end = Math.max(1, ...steps.map((step) => step.offset_ms + (step.duration_ms || 0)), ...detail.events.map((event) => event.offset_ms));
+  const width = Math.max(container.clientWidth || 900, 320);
+  const left = 92, right = 16, laneHeight = 30, top = 12;
+  const height = top + LANES.length * laneHeight + 34;
+  const scale = (milliseconds) => left + (milliseconds / end) * (width - left - right);
+  const svg = svgElement("svg", { viewBox: "0 0 " + width + " " + height, height: String(height), role: "img", "aria-label": "Run timeline. The steps table below lists the same actions." });
+  LANES.forEach((lane, index) => {
+    const y = top + index * laneHeight;
+    svg.append(svgElement("line", { x1: left, x2: width - right, y1: y + laneHeight - 4, y2: y + laneHeight - 4, stroke: "var(--grid)" }));
+    const label = svgElement("text", { x: 0, y: y + laneHeight / 2 + 4, fill: "var(--text-secondary)", "font-size": "12" });
+    label.textContent = lane;
+    svg.append(label);
+  });
+  const tickCount = 6;
+  for (let index = 0; index <= tickCount; index++) {
+    const milliseconds = (end / tickCount) * index;
+    const x = scale(milliseconds);
+    svg.append(svgElement("line", { x1: x, x2: x, y1: top, y2: top + LANES.length * laneHeight, stroke: "var(--grid)", "stroke-dasharray": "2 3" }));
+    const tick = svgElement("text", { x, y: height - 14, fill: "var(--text-muted)", "font-size": "11", "text-anchor": "middle" });
+    tick.textContent = formatDuration(milliseconds, end);
+    svg.append(tick);
+  }
+  for (const event of detail.events) {
+    const x = scale(event.offset_ms);
+    svg.append(svgElement("line", { x1: x, x2: x, y1: top - 6, y2: top + LANES.length * laneHeight, stroke: "var(--text-muted)", "stroke-width": "1" }));
+    const hit = svgElement("rect", { x: x - 5, y: top - 8, width: 10, height: LANES.length * laneHeight + 8, fill: "transparent" });
+    hit.addEventListener("mousemove", (mouse) => showTooltip(mouse, ["Event: " + event.event_type, "at " + formatNumber(event.offset_ms / 1000, 2) + " s"]));
+    hit.addEventListener("mouseleave", hideTooltip);
+    svg.append(hit);
+  }
+  for (const step of steps) {
+    const lane = Math.max(0, LANES.indexOf(step.role));
+    const x = scale(step.offset_ms);
+    const barWidth = Math.max(4, scale(step.offset_ms + (step.duration_ms || 0)) - x);
+    // Model calls sit in the upper half of a lane and tool requests in the lower half, so
+    // millisecond tool calls stay visible beside multi second model calls.
+    const lower = step.kind === "tool_request";
+    const y = top + lane * laneHeight + (lower ? 14 : 3);
+    const failed = step.state !== "completed";
+    const bar = svgElement("rect", {
+      x, y, width: barWidth, height: lower ? 9 : 10, rx: 2,
+      fill: KIND_COLORS[step.kind] || "var(--text-muted)",
+      stroke: failed ? "var(--critical)" : "var(--surface)", "stroke-width": failed ? "2" : "1",
+    });
+    bar.style.cursor = "pointer";
+    bar.addEventListener("mousemove", (mouse) => showTooltip(mouse, stepTooltip(step)));
+    bar.addEventListener("mouseleave", hideTooltip);
+    bar.addEventListener("click", () => { state.expandedSteps.add(step.action_id); renderDetail(); document.getElementById("step-" + step.action_id)?.scrollIntoView({ block: "center" }); });
+    svg.append(bar);
+  }
+  container.replaceChildren(svg);
+}
+
+function stepDetails(step, detail) {
+  const parts = [];
+  if (step.arguments) parts.push(element("div", {}, [element("strong", { text: "Arguments" }), element("pre", { text: JSON.stringify(step.arguments, null, 2) })]));
+  if (step.tool_calls && step.tool_calls.length) parts.push(element("div", { text: "Requested tools: " + step.tool_calls.join(", ") }));
+  if (step.reasoning_tokens) parts.push(element("div", { class: "secondary", text: formatNumber(step.reasoning_tokens) + " reasoning tokens (reasoning text is not shown)" }));
+  if (step.text_preview) parts.push(element("div", {}, [element("strong", { text: "Visible text" }), element("pre", { text: step.text_preview })]));
+  if (step.error_code) parts.push(element("div", {}, [element("strong", { text: "Error " + step.error_code }), element("pre", { text: step.error_message || "" })]));
+  const evidence = step.evidence_id && detail.evidence[step.evidence_id];
+  if (evidence) {
+    parts.push(element("div", {}, [
+      element("strong", { text: "Evidence " + step.evidence_id }),
+      element("div", { class: "secondary", text: "Bounds " + JSON.stringify(evidence.effective_bounds) + (evidence.quality_flags && evidence.quality_flags.length ? ", flags " + evidence.quality_flags.join(", ") : "") }),
+      element("pre", { text: evidence.result_preview }),
+    ]));
+  }
+  return parts.length ? parts : [element("span", { class: "muted", text: "No further detail recorded." })];
+}
+
+function renderSteps(detail) {
+  const columns = ["#", "Start s", "Role", "Kind", "Name", "State", "ms", "Tokens in", "Tokens out", "USD", "Evidence or error"];
+  const rows = [];
+  for (const step of detail.steps) {
+    const expanded = state.expandedSteps.has(step.action_id);
+    rows.push(element("tr", {
+      id: "step-" + step.action_id, class: "clickable" + (expanded ? " selected" : ""),
+      onclick: () => { expanded ? state.expandedSteps.delete(step.action_id) : state.expandedSteps.add(step.action_id); renderDetail(); document.getElementById("toggle-" + step.action_id)?.focus({ preventScroll: true }); },
+    }, [
+      element("td", { class: "number" }, element("button", { type: "button", class: "link", id: "toggle-" + step.action_id, "aria-expanded": String(expanded), "aria-label": "Details for action " + step.action_id, text: step.action_id })),
+      element("td", { class: "number", text: formatNumber(step.offset_ms / 1000, 2) }),
+      element("td", { text: step.role }),
+      element("td", {}, [element("span", { class: "swatch", style: "display:inline-block;width:10px;height:8px;border-radius:2px;margin-right:6px;background:" + KIND_COLORS[step.kind] }), KIND_LABELS[step.kind] || step.kind]),
+      element("td", { class: "mono", text: stepName(step) }),
+      element("td", {}, statusLabel(step.state)),
+      element("td", { class: "number", text: formatNumber(step.duration_ms) }),
+      element("td", { class: "number", text: step.kind === "provider_attempt" ? formatNumber(step.input_tokens) : "" }),
+      element("td", { class: "number", text: step.kind === "provider_attempt" ? formatNumber(step.output_tokens) : "" }),
+      element("td", { class: "number", text: step.kind === "provider_attempt" ? formatUsd(step.usd) + (step.usage_known ? "" : " reserved") : "" }),
+      element("td", { class: "mono", text: step.error_code || (step.cache_hit ? "cache " : "") + (step.evidence_id || "") }),
+    ]));
+    if (expanded) rows.push(element("tr", { class: "expanded" }, element("td", { colspan: columns.length }, stepDetails(step, detail))));
+  }
+  return element("div", { class: "scroll" }, element("table", {}, [
+    element("thead", {}, element("tr", {}, columns.map((label) => element("th", { text: label })))),
+    element("tbody", {}, rows),
+  ]));
+}
+
+function renderOutcomes(detail) {
+  const blocks = [];
+  blocks.push(element("h3", { text: "Findings revisions" }));
+  blocks.push(detail.findings.length ? element("div", {}, detail.findings.map((entry) => element("div", { class: "panel" }, [
+    element("div", { class: "chips" }, [element("span", { class: "badge", text: "revision " + entry.revision }), element("span", { class: "badge", text: "cause " + entry.cause_status }), element("span", { class: "badge", text: entry.factual_claims + " factual claims" }), ...entry.observation_patterns.map((pattern) => element("span", { class: "badge mono", text: pattern }))]),
+    element("div", { class: "secondary", text: entry.decision_summary }),
+    entry.hypotheses.length ? element("div", { class: "note", text: "Hypotheses: " + entry.hypotheses.map((item) => item.hypothesis + " " + item.status).join(", ") }) : null,
+  ]))) : element("p", { class: "empty", text: "No findings submitted." }));
+  blocks.push(element("h3", { text: "Code verification" }));
+  blocks.push(detail.verifications.length ? element("div", {}, detail.verifications.map((entry) => element("div", { class: "panel" }, [
+    element("div", { class: "chips" }, [statusLabel(entry.passed ? "passed" : "failed", (entry.passed ? "passed, " : "failed, ") + entry.claim_checks + " claim checks"), element("span", { class: "badge mono", text: entry.findings_id })]),
+    entry.failed_checks.length ? simpleTable([["Claim", (row) => row.claim_id], ["Code", (row) => element("span", { class: "mono", text: row.code || "" })], ["Expected", (row) => JSON.stringify(row.expected)], ["Actual", (row) => JSON.stringify(row.actual)], ["Message", (row) => element("span", { class: "wrap", text: row.message })]], entry.failed_checks, "") : null,
+    entry.policy_errors.length ? element("pre", { text: JSON.stringify(entry.policy_errors, null, 2) }) : null,
+  ]))) : element("p", { class: "empty", text: "Verification not run for this run." }));
+  blocks.push(element("h3", { text: "Reviewer" }));
+  blocks.push(detail.reviews.length ? element("div", {}, detail.reviews.map((entry) => element("div", { class: "panel" }, [
+    element("div", { class: "chips" }, [element("span", { class: "badge", text: "round " + entry.round }), statusLabel(entry.decision), element("span", { class: "badge", text: entry.independent_query_count + " independent queries" }), entry.disputed_claim_ids.length ? element("span", { class: "badge", text: "disputes " + entry.disputed_claim_ids.join(", ") }) : null]),
+    element("div", { class: "secondary", text: entry.reason_summary }),
+    entry.requested_queries.length ? element("pre", { text: "Requested: " + JSON.stringify(entry.requested_queries, null, 2) }) : null,
+    entry.review_limitation ? element("div", { class: "note", text: "Limitation: " + entry.review_limitation }) : null,
+  ]))) : element("p", { class: "empty", text: "No review in this run." }));
+  if (detail.report) {
+    const report = detail.report;
+    blocks.push(element("h3", { text: "Final report" }));
+    blocks.push(element("div", { class: "chips" }, [
+      statusLabel(report.workflow_outcome, "workflow " + report.workflow_outcome), statusLabel(report.fact_check_status, "fact check " + report.fact_check_status),
+      statusLabel(report.review_status, "review " + report.review_status), element("span", { class: "badge", text: "cause " + report.cause_status }),
+      element("span", { class: "badge", text: report.verified_claims + " verified, " + report.rejected_claims + " rejected, " + report.unverified_claims + " unverified claims" }),
+      element("span", { class: "badge", text: "basis " + report.report_basis }),
+    ]));
+  }
+  return blocks;
+}
+
+function renderDetail() {
+  const section = document.getElementById("detail");
+  const detail = state.selectedRunId && state.details[state.selectedRunId];
+  if (!detail) { section.replaceChildren(); return; }
+  const run = detail.run;
+  const candidate = detail.candidate || {};
+  const timeline = element("div", { id: "timeline" });
+  section.replaceChildren(element("div", { class: "panel" }, [
+    element("h2", {}, [element("span", { class: "mono", text: run.run_id })]),
+    element("div", { class: "chips" }, [
+      element("span", { class: "badge", text: run.arm }), element("span", { class: "badge", text: run.execution_mode }),
+      element("span", { class: "badge mono", text: detail.model_id || "no model" }), statusLabel(runOutcome({ ...run, active_actions: detail.steps.filter((step) => ["reserved", "started"].includes(step.state)).length }), (run.workflow_outcome || run.status) + (run.terminal_reason ? ", " + run.terminal_reason : "")),
+    ]),
+    element("div", { class: "secondary", text: "Candidate " + (candidate.event_id || "?") + " in " + (candidate.session_id || "?") + ": event " + formatWindow(candidate.event_window) + ", reference median " + formatNumber(candidate.reference_median_mbps, 2) + " Mbps, event median " + formatNumber(candidate.event_median_mbps, 2) + " Mbps" }),
+    element("h3", { text: "Budget used against the run's limits" }),
+    element("div", { class: "meters" }, detail.budget.map(meter)),
+    element("h3", { text: "Timeline" }),
+    element("div", { class: "legend" }, Object.entries(KIND_LABELS).map(([kind, label]) => element("span", {}, [element("span", { class: "swatch", style: "background:" + KIND_COLORS[kind] }), label])).concat([element("span", {}, [element("span", { class: "swatch", style: "background:transparent;border:2px solid var(--critical)" }), "not completed"]), element("span", { class: "muted", text: "Vertical lines are handoffs and revision requests" })])),
+    timeline,
+    element("h3", { text: "Steps (select a row or a bar for arguments, evidence and errors)" }),
+    renderSteps(detail),
+    ...renderOutcomes(detail),
+  ]));
+  renderTimeline(timeline, detail);
+}
+
+async function fetchJson(path) {
+  const response = await fetch(path, { cache: "no-store" });
+  if (!response.ok) throw new Error(path + " " + response.status);
+  return response.json();
+}
+
+async function selectRun(runId, scrollBehavior = "smooth") {
+  state.selectedRunId = runId;
+  state.expandedSteps.clear();
+  history.replaceState(null, "", "#run=" + encodeURIComponent(runId));
+  if (LIVE) {
+    try { state.details[runId] = await fetchJson("/api/runs/" + encodeURIComponent(runId)); } catch (error) { state.refreshError = String(error); renderHeader(); }
+    if (state.selectedRunId !== runId) return;
+  }
+  renderRuns();
+  renderDetail();
+  document.getElementById("detail").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : scrollBehavior, block: "start" });
+}
+
+function runFromAddress() {
+  const match = location.hash.match(/^#run=(.+)$/);
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
+function renderAll() {
+  renderHeader();
+  renderTiles();
+  renderFilters();
+  renderRuns();
+  renderAggregates();
+}
+
+async function refresh() {
+  if (state.paused || state.refreshing) return;
+  state.refreshing = true;
+  try {
+    const overview = await fetchJson("/api/overview");
+    const runId = state.selectedRunId;
+    const detail = runId ? await fetchJson("/api/runs/" + encodeURIComponent(runId)) : null;
+    if (state.paused) return;
+    state.overview = overview;
+    if (detail && state.selectedRunId === runId) state.details[runId] = detail;
+    state.lastRefresh = Date.now();
+    state.refreshError = null;
+    const focusedId = document.activeElement?.id;
+    renderAll();
+    if (state.selectedRunId) renderDetail();
+    if (focusedId) document.getElementById(focusedId)?.focus({ preventScroll: true });
+  } catch (error) {
+    state.refreshError = String(error);
+    renderHeader();
+  } finally {
+    state.refreshing = false;
+  }
+}
+
+document.getElementById("pause-refresh").addEventListener("click", (event) => {
+  state.paused = !state.paused;
+  event.currentTarget.textContent = state.paused ? "Resume updates" : "Pause updates";
+  event.currentTarget.setAttribute("aria-pressed", String(state.paused));
+  renderHeader();
+  if (!state.paused) refresh();
+});
+
+for (const id of ["filter-arm", "filter-outcome"]) document.getElementById(id).addEventListener("change", renderRuns);
+document.getElementById("filter-text").addEventListener("input", renderRuns);
+window.addEventListener("resize", () => { if (state.selectedRunId) renderDetail(); });
+if (LIVE) {
+  document.getElementById("pause-refresh").hidden = false;
+  state.selectedRunId = runFromAddress();
+  refresh();
+  setInterval(refresh, 2000);
+} else {
+  renderAll();
+  const requested = runFromAddress();
+  if (requested && state.details[requested]) selectRun(requested, "instant");
+}
+</script>
+</body>
+</html>

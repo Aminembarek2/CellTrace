@@ -1,0 +1,296 @@
+{
+ "method": "automated blind paired rating by two model raters, not a human rating",
+ "produced_by": "scripts/blind_review.py (prepare, rate and score), combined into this summary by hand",
+ "protocol": {
+  "plan": "internal plan, summarized in docs/TECHNICAL_REPORT.md, appendix",
+  "first_round_plan_sha256": "13c1388f7ce2b76332981859873b8e493ee036a89a58663b172cab21dac0e7bf",
+  "repeated_round_plan_sha256": "cbc33500c43ace6efb8ae793419cb0c9f80a3161d07fc024daefd239cb2ec07c",
+  "repeated_round_timing": "written after the first round was unblinded and before any repeated rating",
+  "position_bias_control": "each pair rated as presented and with A and B swapped, a preference counts only when both orders agree",
+  "qualification": "a rater counts only if it detects at least 5 of 6 planted overclaims"
+ },
+ "primary_result": "repeated_round",
+ "repeated_round": {
+  "packet": "corrected rendering that shows the measurements and assumptions behind each verdict, fresh blinding key",
+  "packet_mapping_sha256": "634ac8d946d6f310d1a41bb1e68bcc97d7774b14e607fdb93e1a501230e05415",
+  "raters": {
+   "gemini": {
+    "model_id": "google/gemini-3.8-flash",
+    "execution_mode": "live",
+    "pairs": 24,
+    "pairs_rated_in_both_orders": 24,
+    "order_consistent_preferences": 22,
+    "stopped_by": null,
+    "known_or_reserved_usd": 0.47061,
+    "ceiling_usd": 1.0
+   },
+   "deepseek": {
+    "model_id": "deepseek/deepseek-v4.1-flash",
+    "execution_mode": "live",
+    "pairs": 24,
+    "pairs_rated_in_both_orders": 24,
+    "order_consistent_preferences": 24,
+    "stopped_by": null,
+    "known_or_reserved_usd": 0.102058464,
+    "ceiling_usd": 0.3
+   }
+  },
+  "provider_usage": {
+   "gemini": {
+    "provider_attempts": 48,
+    "completed": 48,
+    "failed": 0,
+    "uncertain": 0,
+    "actual_usd": 0.47061,
+    "input_tokens": 157250,
+    "output_tokens": 94046
+   },
+   "deepseek": {
+    "provider_attempts": 49,
+    "completed": 49,
+    "failed": 0,
+    "uncertain": 0,
+    "actual_usd": 0.102058464,
+    "input_tokens": 114756,
+    "output_tokens": 56121
+   }
+  },
+  "score": {
+   "raters": 2,
+   "per_rater": [
+    {
+     "rater": "gemini-3.8-flash",
+     "real_pairs": 18,
+     "agent_preferred": 16,
+     "template_preferred": 0,
+     "ties": 2,
+     "agent_share_of_decided": 1.0,
+     "agent_share_interval_95": [
+      0.7940927857921773,
+      1.0
+     ],
+     "sign_test_p_two_sided": 3.0517578125e-05,
+     "criterion_mean_difference_agent_minus_template": {
+      "grounded": 0.3055555555555556,
+      "cause_open": 1.2222222222222223,
+      "discriminating_next": 1.4444444444444444,
+      "no_overclaim": 1.4166666666666667,
+      "clarity": 0.5277777777777778
+     },
+     "criterion_sign_test_p": {
+      "grounded": 0.021270751953125,
+      "cause_open": 0.00014495849609375,
+      "discriminating_next": 7.62939453125e-06,
+      "no_overclaim": 1.52587890625e-05,
+      "clarity": 0.0018310546875
+     },
+     "calibration_detected": "6 of 6",
+     "qualified": true
+    },
+    {
+     "rater": "deepseek-v4.1-flash",
+     "real_pairs": 18,
+     "agent_preferred": 18,
+     "template_preferred": 0,
+     "ties": 0,
+     "agent_share_of_decided": 1.0,
+     "agent_share_interval_95": [
+      0.8146980318621477,
+      1.0
+     ],
+     "sign_test_p_two_sided": 7.62939453125e-06,
+     "criterion_mean_difference_agent_minus_template": {
+      "grounded": 0.8888888888888888,
+      "cause_open": 0.5833333333333334,
+      "discriminating_next": 1.4444444444444444,
+      "no_overclaim": 0.8611111111111112,
+      "clarity": -0.6944444444444444
+     },
+     "criterion_sign_test_p": {
+      "grounded": 1.52587890625e-05,
+      "cause_open": 0.0018310546875,
+      "discriminating_next": 7.62939453125e-06,
+      "no_overclaim": 0.0001220703125,
+      "clarity": 6.103515625e-05
+     },
+     "calibration_detected": "6 of 6",
+     "qualified": true
+    }
+   ],
+   "agreement": {
+    "preference_percent": 0.8888888888888888,
+    "preference_alpha_nominal": -0.02941176470588225
+   }
+  },
+  "session_level": {
+   "sessions": 8,
+   "incidents_per_session": [
+    8,
+    3,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "gemini": "agent preferred in 8 of 8 sessions",
+   "deepseek": "agent preferred in 8 of 8 sessions",
+   "sign_test_p_two_sided": 0.0078125,
+   "note": "the incident level p values treat 18 clustered incidents as independent, the session level figure is the one reported"
+  },
+  "note_on_alpha": "Krippendorff's alpha is near zero although raters agree on 16 of 18 pairs, because almost every answer is the same category. Percent agreement is the informative figure here.",
+  "rater_comments": "Gemini names the template's application demand verdict in 15 pairs and DeepSeek in 17, now as resting on the active flag alone",
+  "actual_usd": 0.572668
+ },
+ "first_round": {
+  "packet": "first rendering, which hid the measurement behind each verdict",
+  "packet_mapping_sha256": "a9bc3a6f2eaccc02d3af7247c880d771cf92b6eb7c71bee5136b5f1099904748",
+  "raters": {
+   "gemini": {
+    "model_id": "google/gemini-3.8-flash",
+    "execution_mode": "live",
+    "pairs": 24,
+    "pairs_rated_in_both_orders": 24,
+    "order_consistent_preferences": 23,
+    "stopped_by": null,
+    "known_or_reserved_usd": 0.4420185,
+    "ceiling_usd": 1.0
+   },
+   "deepseek": {
+    "model_id": "deepseek/deepseek-v4.1-flash",
+    "execution_mode": "live",
+    "pairs": 24,
+    "pairs_rated_in_both_orders": 24,
+    "order_consistent_preferences": 23,
+    "stopped_by": null,
+    "known_or_reserved_usd": 0.09365694,
+    "ceiling_usd": 0.3
+   }
+  },
+  "provider_usage": {
+   "gemini": {
+    "provider_attempts": 48,
+    "completed": 48,
+    "failed": 0,
+    "uncertain": 0,
+    "actual_usd": 0.4420185,
+    "input_tokens": 119968,
+    "output_tokens": 93878
+   },
+   "deepseek": {
+    "provider_attempts": 49,
+    "completed": 49,
+    "failed": 0,
+    "uncertain": 0,
+    "actual_usd": 0.09365694,
+    "input_tokens": 87913,
+    "output_tokens": 55842
+   }
+  },
+  "score": {
+   "raters": 2,
+   "per_rater": [
+    {
+     "rater": "gemini-3.8-flash",
+     "real_pairs": 18,
+     "agent_preferred": 17,
+     "template_preferred": 0,
+     "ties": 1,
+     "agent_share_of_decided": 1.0,
+     "agent_share_interval_95": [
+      0.8049356770309068,
+      1.0
+     ],
+     "sign_test_p_two_sided": 1.52587890625e-05,
+     "criterion_mean_difference_agent_minus_template": {
+      "grounded": 1.4722222222222223,
+      "cause_open": 1.2777777777777777,
+      "discriminating_next": 1.7222222222222223,
+      "no_overclaim": 1.6666666666666667,
+      "clarity": 1.3055555555555556
+     },
+     "criterion_sign_test_p": {
+      "grounded": 7.62939453125e-06,
+      "cause_open": 0.00014495849609375,
+      "discriminating_next": 7.62939453125e-06,
+      "no_overclaim": 7.62939453125e-06,
+      "clarity": 3.0517578125e-05
+     },
+     "calibration_detected": "6 of 6",
+     "qualified": true
+    },
+    {
+     "rater": "deepseek-v4.1-flash",
+     "real_pairs": 18,
+     "agent_preferred": 17,
+     "template_preferred": 0,
+     "ties": 1,
+     "agent_share_of_decided": 1.0,
+     "agent_share_interval_95": [
+      0.8049356770309068,
+      1.0
+     ],
+     "sign_test_p_two_sided": 1.52587890625e-05,
+     "criterion_mean_difference_agent_minus_template": {
+      "grounded": 1.2222222222222223,
+      "cause_open": 0.5555555555555556,
+      "discriminating_next": 1.5833333333333333,
+      "no_overclaim": 1.0555555555555556,
+      "clarity": -0.2222222222222222
+     },
+     "criterion_sign_test_p": {
+      "grounded": 7.62939453125e-06,
+      "cause_open": 0.00738525390625,
+      "discriminating_next": 7.62939453125e-06,
+      "no_overclaim": 3.0517578125e-05,
+      "clarity": 0.0654296875
+     },
+     "calibration_detected": "6 of 6",
+     "qualified": true
+    }
+   ],
+   "agreement": {
+    "preference_percent": 1.0,
+    "preference_alpha_nominal": 1.0
+   }
+  },
+  "audit_after_unblinding": {
+   "tie": "P21 for both raters, both chose position A in both orders, so the swap rule made it a tie",
+   "median_report_characters": {
+    "agent": 4381,
+    "template": 1212
+   },
+   "median_verified_measurements_listed": {
+    "agent": 15,
+    "template": 3
+   },
+   "template_reports_marking_application_demand_contradicted": "18 of 18, agent reports 0 of 18. The verdict cites the activity share (active in 100% of samples) and an assumption, but rendering 1 dropped that link and printed the share as 'active share 1 of N samples'",
+   "pairs_where_rater_comments_name_that_verdict": {
+    "gemini": "18 of 18",
+    "deepseek": "18 of 18"
+   }
+  },
+  "actual_usd": 0.535675
+ },
+ "rater_substitution": {
+  "recorded_before_any_rating_was_read": true,
+  "planned_second_rater": "z-ai/glm-5.3-flash on DeepInfra",
+  "outcome": "HTTP 429 on every attempt, nothing charged, 12 of 12 attempts in two runs",
+  "replacement": "deepseek/deepseek-v4.1-flash on DeepSeek, the only other fixed profile, with the same packet, rubric, swap protocol and qualification rule",
+  "consequence": "DeepSeek also wrote the agent reports and may prefer them (self enhancement bias, Zheng et al. 2023), so Gemini is the primary rater",
+  "strict_schema": "the DeepSeek endpoint does not advertise structured outputs, so its rating tool is sent without a strict schema, and every field is still validated locally"
+ },
+ "offline_negative_control": {
+  "assessment_method": "automated model rater, not a human rating",
+  "model_id": "scripted-fixture",
+  "execution_mode": "scripted_fixture",
+  "pairs": 24,
+  "pairs_rated_in_both_orders": 24,
+  "order_consistent_preferences": 24,
+  "stopped_by": null,
+  "known_or_reserved_usd": 0.0,
+  "ceiling_usd": 0.01
+ },
+ "total_actual_usd": 1.108343
+}

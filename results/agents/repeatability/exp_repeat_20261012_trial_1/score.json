@@ -1,0 +1,203 @@
+{
+  "attempted_runs": 27,
+  "by_arm": [
+    {
+      "arm": "investigator_gated",
+      "budget_prevented": 0,
+      "completed": 27,
+      "corrected_after_rejection": 15,
+      "crashed": 0,
+      "dispatched_runs": 27,
+      "exhausted": 0,
+      "fabricated_evidence_claims": 0,
+      "failed": 0,
+      "mean_fact_completeness": 0.9629629629629629,
+      "mean_factual_support": 1.0,
+      "mean_input_tokens": 6835.111111111111,
+      "mean_numerical_validity": 1.0,
+      "mean_output_tokens": 14425.333333333334,
+      "mean_provider_attempts": 6.592592592592593,
+      "mean_tool_requests": 13.25925925925926,
+      "median_active_ms": 62866,
+      "model_id": "deepseek/deepseek-v4.1-flash",
+      "partial": 0,
+      "pattern_recovery_rate": 0.8695652173913043,
+      "pattern_scored_runs": 23,
+      "review_change_counts": {
+        "review_corrected_claims": 0,
+        "review_damaged_claims": 0,
+        "review_dropped_claims": 0,
+        "review_initial_failed_claims": 0,
+        "review_initial_passed_claims": 0,
+        "review_new_claims": 0,
+        "review_new_failed_claims": 0,
+        "review_retained_claims": 0,
+        "review_revision_pairs": 0
+      },
+      "runs": 27,
+      "runs_with_claims": 27,
+      "total_estimated_usd": 0.267109,
+      "unavailable": 0
+    }
+  ],
+  "completed_runs": 27,
+  "execution_modes": [
+    "live"
+  ],
+  "experiment_id": "exp_repeat_20261012_trial_1",
+  "freeze": {
+    "arms": [
+      "investigator_gated"
+    ],
+    "case_limit": null,
+    "detector_config_hash": "5eb856cf5702195aa044c2d01a7841d405fe69450abe5d167158ecdd11b5d167",
+    "manifest_sha256": "1089acb0280c514db547d10b72765495f8a931d2ebe06161e95e6521b4c76a10",
+    "mode": "live",
+    "roles": {
+      "investigator_prompt_sha256": "92c455d6eec2bda0af350589f912646fecd407f3b7a827f1888fa3710141d7b9",
+      "investigator_tools_sha256": "da61504e38dbc6e3c9a1f97b70a339a47aab310fe68fe4928dda89f8324b6d91",
+      "reviewer_prompt_sha256": "af9476c76f75bf471a19f2d6d6db654b168a29063f753448e9f891b90d520ccc",
+      "reviewer_tools_sha256": "ec89ced3f451568f5379dcdc9de4a251f678e9886211ce9cfc7566a90dd89c76"
+    },
+    "runtime_limits": {
+      "checkpoint_store": "artifacts/private/replication_reliability_20261012/step3/trial_1/checkpoints.sqlite3",
+      "enable_live_calls": true,
+      "evidence_radius_after_ms": 30000,
+      "evidence_radius_before_ms": 60000,
+      "maximum_active_seconds": 600,
+      "maximum_estimated_usd_per_experiment": 1.0,
+      "maximum_estimated_usd_per_run": 0.5,
+      "maximum_input_tokens": 240000,
+      "maximum_output_tokens": 64000,
+      "maximum_output_tokens_per_attempt": 16384,
+      "maximum_provider_attempts": 20,
+      "maximum_request_retries": 1,
+      "maximum_result_bytes": 16000,
+      "maximum_review_rounds": 2,
+      "maximum_tool_requests": 24,
+      "maximum_tool_window_ms": 120000,
+      "model_effort": "high",
+      "model_id": "deepseek/deepseek-v4.1-flash",
+      "provider": "openrouter",
+      "provider_timeout_seconds": 120.0,
+      "require_live_capability_probe": true,
+      "require_review_measurement": false,
+      "review_round_input_reserve": 0,
+      "review_round_output_reserve": 0,
+      "review_round_provider_reserve": 0,
+      "review_round_tool_reserve": 0,
+      "reviewer_tool_reserve": 0,
+      "run_store": "artifacts/private/replication_reliability_20261012/step3/trial_1/runs.sqlite3",
+      "show_remaining_budget": false,
+      "strict_tool_schemas": false,
+      "verified_capability_record": "artifacts/private/replication_reliability_20261012/step3/probe/probe_ea806f7c8b9e4a368d7ad5e7bc339bf5.json",
+      "verified_endpoint_record": "artifacts/private/replication_reliability_20261012/step3/metadata/deepseek_deepseek-v4.1-flash.json",
+      "verified_rate_card": "artifacts/private/replication_reliability_20261012/step3/configs/deepseek_rates.yaml"
+    },
+    "tool_version": "tools-2"
+  },
+  "label": "Live experiment. Inspect completed and unavailable counts before interpreting scores.",
+  "manifest_sha256": "1089acb0280c514db547d10b72765495f8a931d2ebe06161e95e6521b4c76a10",
+  "mode": "live",
+  "notes": [
+    "Constructed variants are observation patterns with a known construction, not physical causes.",
+    "Cases built from one base window are correlated. Source sessions are the bootstrap unit.",
+    "cause_status is constrained by the schema, so its appropriateness is not evidence of reasoning.",
+    "Scores cover code checked claims and observation labels. Causal language and usefulness are not scored here.",
+    "Review corrections and damage compare retained claim IDs in the immediate revision after a review. Initial failed and passed retained claims are the respective denominators. New failed claims are reported over all new claims, and dropped claims are counted separately. These changes do not establish reviewer causation."
+  ],
+  "paired_differences": {
+    "fact_completeness:investigator_gated_minus_investigator_raw": {
+      "cluster_bootstrap_95": null,
+      "mean_difference": null,
+      "note": "too few source sessions for an interval, descriptive only",
+      "pairs": 0,
+      "source_session_clusters": 0
+    },
+    "fact_completeness:investigator_reviewer_gated_minus_investigator_gated": {
+      "cluster_bootstrap_95": null,
+      "mean_difference": null,
+      "note": "too few source sessions for an interval, descriptive only",
+      "pairs": 0,
+      "source_session_clusters": 0
+    },
+    "factual_support:investigator_gated_minus_investigator_raw": {
+      "cluster_bootstrap_95": null,
+      "mean_difference": null,
+      "note": "too few source sessions for an interval, descriptive only",
+      "pairs": 0,
+      "source_session_clusters": 0
+    },
+    "factual_support:investigator_reviewer_gated_minus_investigator_gated": {
+      "cluster_bootstrap_95": null,
+      "mean_difference": null,
+      "note": "too few source sessions for an interval, descriptive only",
+      "pairs": 0,
+      "source_session_clusters": 0
+    },
+    "pattern_recovered:investigator_gated_minus_investigator_raw": {
+      "cluster_bootstrap_95": null,
+      "mean_difference": null,
+      "note": "too few source sessions for an interval, descriptive only",
+      "pairs": 0,
+      "source_session_clusters": 0
+    },
+    "pattern_recovered:investigator_reviewer_gated_minus_investigator_gated": {
+      "cluster_bootstrap_95": null,
+      "mean_difference": null,
+      "note": "too few source sessions for an interval, descriptive only",
+      "pairs": 0,
+      "source_session_clusters": 0
+    }
+  },
+  "paired_differences_by_model": {
+    "deepseek/deepseek-v4.1-flash": {
+      "fact_completeness:investigator_gated_minus_investigator_raw": {
+        "cluster_bootstrap_95": null,
+        "mean_difference": null,
+        "note": "too few source sessions for an interval, descriptive only",
+        "pairs": 0,
+        "source_session_clusters": 0
+      },
+      "fact_completeness:investigator_reviewer_gated_minus_investigator_gated": {
+        "cluster_bootstrap_95": null,
+        "mean_difference": null,
+        "note": "too few source sessions for an interval, descriptive only",
+        "pairs": 0,
+        "source_session_clusters": 0
+      },
+      "factual_support:investigator_gated_minus_investigator_raw": {
+        "cluster_bootstrap_95": null,
+        "mean_difference": null,
+        "note": "too few source sessions for an interval, descriptive only",
+        "pairs": 0,
+        "source_session_clusters": 0
+      },
+      "factual_support:investigator_reviewer_gated_minus_investigator_gated": {
+        "cluster_bootstrap_95": null,
+        "mean_difference": null,
+        "note": "too few source sessions for an interval, descriptive only",
+        "pairs": 0,
+        "source_session_clusters": 0
+      },
+      "pattern_recovered:investigator_gated_minus_investigator_raw": {
+        "cluster_bootstrap_95": null,
+        "mean_difference": null,
+        "note": "too few source sessions for an interval, descriptive only",
+        "pairs": 0,
+        "source_session_clusters": 0
+      },
+      "pattern_recovered:investigator_reviewer_gated_minus_investigator_gated": {
+        "cluster_bootstrap_95": null,
+        "mean_difference": null,
+        "note": "too few source sessions for an interval, descriptive only",
+        "pairs": 0,
+        "source_session_clusters": 0
+      }
+    }
+  },
+  "scheduled_runs": 27,
+  "scoring_version": "model_separated_2",
+  "source_sessions": 3,
+  "unscored_runs": 0
+}

@@ -1,0 +1,334 @@
+{
+ "cases": 27,
+ "template_passes": 21,
+ "agent_passes_all_three": 23,
+ "agent_run_passes": "71 of 81",
+ "pairs": {
+  "both": 20,
+  "template_only": 1,
+  "agent_only": 3,
+  "neither": 3
+ },
+ "exact_mcnemar_p": 0.625,
+ "template_failed_checks": {
+  "required_patterns": 6,
+  "completed": 3,
+  "claims_verified": 3
+ },
+ "mean_verified_claims": {
+  "template": 3.037037037037037,
+  "agent": 13.345679012345679
+ },
+ "per_family": {
+  "application_idle": {
+   "cases": 3,
+   "template": 0,
+   "agent_all_three": 3
+  },
+  "cell_change_with_rate_drop": {
+   "cases": 2,
+   "template": 2,
+   "agent_all_three": 2
+  },
+  "cell_change_without_rate_drop": {
+   "cases": 2,
+   "template": 2,
+   "agent_all_three": 2
+  },
+  "clean_control": {
+   "cases": 3,
+   "template": 3,
+   "agent_all_three": 3
+  },
+  "misleading_string": {
+   "cases": 3,
+   "template": 3,
+   "agent_all_three": 3
+  },
+  "missing_metrics": {
+   "cases": 3,
+   "template": 3,
+   "agent_all_three": 3
+  },
+  "rate_drop_with_radio_change": {
+   "cases": 4,
+   "template": 2,
+   "agent_all_three": 2
+  },
+  "stable_radio_rate_drop": {
+   "cases": 3,
+   "template": 2,
+   "agent_all_three": 2
+  },
+  "tool_failure": {
+   "cases": 4,
+   "template": 4,
+   "agent_all_three": 3
+  }
+ },
+ "decision": "the agent passes all three trials in 23 cases and the template passes 21 of 27; with exact McNemar p = 0.625 the two cannot be told apart on these constructed labels",
+ "per_case": [
+  {
+   "case_id": "case_1646e3bce2bb19ea",
+   "family": "rate_drop_with_radio_change",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 3,
+   "agent_claims_mean": 15.0
+  },
+  {
+   "case_id": "case_1c0b146d64aacaec",
+   "family": "misleading_string",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 2,
+   "agent_claims_mean": 13.666666666666666
+  },
+  {
+   "case_id": "case_2262ff2b72efad0f",
+   "family": "application_idle",
+   "template_pass": false,
+   "template_failed_checks": [
+    "completed",
+    "claims_verified",
+    "required_patterns"
+   ],
+   "agent_trial_passes": 3,
+   "template_claims": 5,
+   "agent_claims_mean": 13.333333333333334
+  },
+  {
+   "case_id": "case_24e528cf0edbd1a5",
+   "family": "tool_failure",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 1,
+   "agent_claims_mean": 12.333333333333334
+  },
+  {
+   "case_id": "case_2582557b8475cb31",
+   "family": "misleading_string",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 4,
+   "agent_claims_mean": 13.0
+  },
+  {
+   "case_id": "case_2a119756dc45e535",
+   "family": "stable_radio_rate_drop",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 5,
+   "agent_claims_mean": 15.333333333333334
+  },
+  {
+   "case_id": "case_2f1cea631247f60f",
+   "family": "rate_drop_with_radio_change",
+   "template_pass": false,
+   "template_failed_checks": [
+    "required_patterns"
+   ],
+   "agent_trial_passes": 0,
+   "template_claims": 2,
+   "agent_claims_mean": 12.333333333333334
+  },
+  {
+   "case_id": "case_3625eb50f1a5e294",
+   "family": "rate_drop_with_radio_change",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 5,
+   "agent_claims_mean": 15.666666666666666
+  },
+  {
+   "case_id": "case_37f19e253045027b",
+   "family": "tool_failure",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 1,
+   "agent_claims_mean": 12.0
+  },
+  {
+   "case_id": "case_441827b4fc931078",
+   "family": "cell_change_with_rate_drop",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 4,
+   "agent_claims_mean": 16.0
+  },
+  {
+   "case_id": "case_80627831f6ae9fef",
+   "family": "misleading_string",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 2,
+   "agent_claims_mean": 12.333333333333334
+  },
+  {
+   "case_id": "case_82f37c082f997767",
+   "family": "cell_change_without_rate_drop",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 5,
+   "agent_claims_mean": 15.0
+  },
+  {
+   "case_id": "case_99633f216ae03679",
+   "family": "stable_radio_rate_drop",
+   "template_pass": false,
+   "template_failed_checks": [
+    "required_patterns"
+   ],
+   "agent_trial_passes": 0,
+   "template_claims": 2,
+   "agent_claims_mean": 11.0
+  },
+  {
+   "case_id": "case_a0e27977ad4000ff",
+   "family": "missing_metrics",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 2,
+   "agent_claims_mean": 13.666666666666666
+  },
+  {
+   "case_id": "case_a2e41f49df1d6557",
+   "family": "cell_change_without_rate_drop",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 4,
+   "agent_claims_mean": 14.333333333333334
+  },
+  {
+   "case_id": "case_c0145a25ddb96752",
+   "family": "tool_failure",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 1,
+   "agent_claims_mean": 12.0
+  },
+  {
+   "case_id": "case_c20c7543f12171d6",
+   "family": "cell_change_with_rate_drop",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 5,
+   "agent_claims_mean": 13.666666666666666
+  },
+  {
+   "case_id": "case_c35523e8cd31315a",
+   "family": "clean_control",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 2,
+   "agent_claims_mean": 10.0
+  },
+  {
+   "case_id": "case_c4454718fd275e05",
+   "family": "missing_metrics",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 2,
+   "agent_claims_mean": 14.333333333333334
+  },
+  {
+   "case_id": "case_c5ccf48dafe96324",
+   "family": "clean_control",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 5,
+   "agent_claims_mean": 14.0
+  },
+  {
+   "case_id": "case_d1a97b162f872e00",
+   "family": "tool_failure",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 2,
+   "template_claims": 3,
+   "agent_claims_mean": 9.666666666666666
+  },
+  {
+   "case_id": "case_e022fd8d90963d11",
+   "family": "application_idle",
+   "template_pass": false,
+   "template_failed_checks": [
+    "completed",
+    "claims_verified",
+    "required_patterns"
+   ],
+   "agent_trial_passes": 3,
+   "template_claims": 3,
+   "agent_claims_mean": 14.0
+  },
+  {
+   "case_id": "case_e5d4f4f2df01f035",
+   "family": "stable_radio_rate_drop",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 3,
+   "agent_claims_mean": 15.333333333333334
+  },
+  {
+   "case_id": "case_e67a147f1dffbd01",
+   "family": "rate_drop_with_radio_change",
+   "template_pass": false,
+   "template_failed_checks": [
+    "required_patterns"
+   ],
+   "agent_trial_passes": 0,
+   "template_claims": 2,
+   "agent_claims_mean": 11.666666666666666
+  },
+  {
+   "case_id": "case_e9a07040a7e8ebe9",
+   "family": "clean_control",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 3,
+   "agent_claims_mean": 15.0
+  },
+  {
+   "case_id": "case_ec7d8a211b712c2f",
+   "family": "missing_metrics",
+   "template_pass": true,
+   "template_failed_checks": [],
+   "agent_trial_passes": 3,
+   "template_claims": 4,
+   "agent_claims_mean": 14.333333333333334
+  },
+  {
+   "case_id": "case_f37fd16996820574",
+   "family": "application_idle",
+   "template_pass": false,
+   "template_failed_checks": [
+    "completed",
+    "claims_verified",
+    "required_patterns"
+   ],
+   "agent_trial_passes": 3,
+   "template_claims": 2,
+   "agent_claims_mean": 11.333333333333334
+  }
+ ],
+ "method": "same 27 constructed cases, template scored once with the same four checks, agent scored over three trials, compared case by case with an exact McNemar test"
+}

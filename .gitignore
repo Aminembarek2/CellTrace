@@ -1,0 +1,34 @@
+# Python and tooling
+.venv/
+.uv_cache/
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.mpl_cache/
+dist/
+build/
+*.egg-info/
+
+# Credentials
+.env
+.env.*
+!.env.example
+
+# Data and generated outputs. Curated results live in results/.
+/data/
+/artifacts/
+/reports/
+*.duckdb
+*.duckdb.wal
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Operating system
+.DS_Store

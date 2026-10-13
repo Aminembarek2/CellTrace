@@ -1,0 +1,5 @@
+model_id,arm,role,tool,requests,cache_hits,errors,executions
+scripted-fixture,investigator_gated,investigator,compare_windows,62,0,19,59
+scripted-fixture,investigator_gated,investigator,get_activity_state,27,0,0,27
+scripted-fixture,investigator_gated,investigator,get_cell_transitions,27,0,0,27
+scripted-fixture,investigator_gated,investigator,get_session_context,27,0,0,27

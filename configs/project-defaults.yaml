@@ -1,0 +1,79 @@
+# Proposed initial settings, not empirically optimal constants.
+# Unknown fields are rejected by the strict Pydantic config model.
+schema_version: 1
+project:
+  name: celltrace-investigator
+  seed: 42
+  execution: synchronous_serial
+data:
+  primary_source: raca_irish_5g
+  primary_cohort: file_download
+  raw_dir: data/raw
+  processed_dir: data/processed
+  private_evaluation_dir: data/eval_private
+  preserve_raw: true
+  normalized_bin_ms: 1000
+  maximum_forward_fill_ms: 0
+  split_manifest: null
+analysis:
+  detector:
+    name: sustained_relative_drop
+    reference_ms: 30000
+    event_ms: 5000
+    step_ms: 1000
+    minimum_coverage: 0.8
+    minimum_active_fraction: 0.8
+    minimum_reference_mbps: 1.0
+    minimum_absolute_drop_mbps: 0.5
+    minimum_relative_drop: 0.6
+    merge_gap_ms: 1000
+    maximum_event_ms: 30000
+  prediction:
+    horizon_ms: 5000
+    maximum_history_ms: 30000
+    require_complete_target_bins: true
+    baselines: [persistence, trailing_mean]
+    model: hist_gradient_boosting
+    early_stopping: false
+runtime:
+  provider: openrouter
+  enable_live_calls: false
+  model_id: deepseek/deepseek-v4.1-flash
+  model_effort: high
+  # strict tool schemas stay off until a live probe shows the provider accepts them
+  strict_tool_schemas: false
+  run_store: artifacts/private/runs.sqlite3
+  checkpoint_store: artifacts/private/checkpoints.sqlite3
+  maximum_tool_requests: 12
+  maximum_provider_attempts: 12
+  maximum_review_rounds: 2
+  maximum_request_retries: 1
+  maximum_active_seconds: 300
+  provider_timeout_seconds: 45
+  maximum_input_tokens: 40000
+  maximum_output_tokens: 12000
+  maximum_output_tokens_per_attempt: 2048
+  maximum_estimated_usd_per_run: 0.5
+  maximum_estimated_usd_per_experiment: 5.0
+  verified_rate_card: null
+  verified_endpoint_record: null
+  verified_capability_record: null
+  require_live_capability_probe: true
+  evidence_radius_before_ms: 60000
+  evidence_radius_after_ms: 30000
+  maximum_tool_window_ms: 120000
+  maximum_result_bytes: 16000
+evaluation:
+  proposed_heldout_base_windows: 12
+  variants_per_base_window: 3
+  primary_systems: [investigator_raw, investigator_gated, investigator_reviewer_gated]
+  optional_systems: [investigator_self_revision_gated, deterministic_template]
+  repeat_stratified_cases: 6
+  repeats_per_selected_case: 3
+  bootstrap_unit: source_session
+  include_failed_runs: true
+extensions:
+  telecomts: false
+  free_form_sql: false
+  web_interface: false
+  local_llm: false

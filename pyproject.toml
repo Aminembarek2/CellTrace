@@ -1,0 +1,78 @@
+[project]
+name = "celltrace"
+version = "0.1.0"
+description = "Evidence grounded investigation of throughput drops in phone side cellular traces"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+authors = [{ name = "Amine Mbarek" }]
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+dependencies = [
+    "httpx>=0.28,<1",
+    "duckdb>=1.5,<2",
+    "langgraph>=1.2,<2",
+    "langgraph-checkpoint-sqlite>=3.1,<4",
+    "matplotlib>=3.11,<4",
+    "numpy>=2.5,<3",
+    "pandas>=3.0,<4",
+    "pydantic>=2.13,<3",
+    "pyyaml>=6.0,<7",
+    "scikit-learn>=1.9,<2",
+]
+
+[project.urls]
+Homepage = "https://github.com/Aminembarek2/CellTrace"
+Repository = "https://github.com/Aminembarek2/CellTrace"
+
+[project.scripts]
+celltrace = "celltrace.cli:main"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4",
+    "pandas-stubs>=3.0",
+    "pytest>=9.1",
+    "ruff>=0.16",
+    "types-pyyaml>=6.0",
+]
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/celltrace"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/configs", "/docs", "/scripts", "/README.md", "/uv.lock", "/.env.example", "/LICENSE", "/THIRD_PARTY_NOTICES.md"]
+
+[tool.uv]
+default-groups = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers -p no:cacheprovider"
+markers = [
+    "live: calls a real model provider and needs credentials and budget",
+    "external_data: needs the downloaded Raca archive under data/raw",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [".uv_cache", ".cache", "artifacts", "data/**"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unused_ignores = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+# These libraries ship without complete type information.
+module = ["duckdb.*", "sklearn.*", "matplotlib.*", "langgraph.*"]
+ignore_missing_imports = true

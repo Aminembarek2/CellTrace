@@ -1,0 +1,136 @@
+{
+  "all_outcomes_known": true,
+  "bases": 6,
+  "draws_per_finding": 2,
+  "endpoint": "exact location of a non-accept challenge with a cited independent query; free-text reasoning correctness is not certified",
+  "execution_mode": "live",
+  "families": {
+    "capacity_conflation_new": {
+      "decision_objections": 12,
+      "draw_consistency": {
+        "0_of_2": 0,
+        "1_of_2": 0,
+        "2_of_2": 6
+      },
+      "independent_queries": 12,
+      "localized_challenges": 12,
+      "localized_without_query": 12,
+      "scheduled": 12,
+      "statuses": {
+        "submitted": 12
+      },
+      "valid_submissions": 12
+    },
+    "capacity_conflation_original": {
+      "decision_objections": 11,
+      "draw_consistency": {
+        "0_of_2": 0,
+        "1_of_2": 1,
+        "2_of_2": 5
+      },
+      "independent_queries": 12,
+      "localized_challenges": 11,
+      "localized_without_query": 11,
+      "scheduled": 12,
+      "statuses": {
+        "submitted": 12
+      },
+      "valid_submissions": 12
+    },
+    "correct_control": {
+      "decision_objections": 0,
+      "disputed_target_paths": {
+        "/decision_summary": 0
+      },
+      "draw_consistency": {
+        "0_of_2": 6,
+        "1_of_2": 0,
+        "2_of_2": 0
+      },
+      "independent_queries": 12,
+      "localized_challenges": 0,
+      "localized_without_query": 0,
+      "scheduled": 12,
+      "statuses": {
+        "submitted": 12
+      },
+      "valid_submissions": 12
+    },
+    "physical_cause_new": {
+      "decision_objections": 12,
+      "draw_consistency": {
+        "0_of_2": 0,
+        "1_of_2": 0,
+        "2_of_2": 6
+      },
+      "independent_queries": 12,
+      "localized_challenges": 12,
+      "localized_without_query": 12,
+      "scheduled": 12,
+      "statuses": {
+        "submitted": 12
+      },
+      "valid_submissions": 12
+    },
+    "physical_cause_original": {
+      "decision_objections": 12,
+      "draw_consistency": {
+        "0_of_2": 0,
+        "1_of_2": 0,
+        "2_of_2": 6
+      },
+      "independent_queries": 12,
+      "localized_challenges": 12,
+      "localized_without_query": 12,
+      "scheduled": 12,
+      "statuses": {
+        "submitted": 12
+      },
+      "valid_submissions": 12
+    },
+    "window_scope_new": {
+      "decision_objections": 10,
+      "draw_consistency": {
+        "0_of_2": 0,
+        "1_of_2": 2,
+        "2_of_2": 4
+      },
+      "independent_queries": 12,
+      "localized_challenges": 10,
+      "localized_without_query": 10,
+      "scheduled": 12,
+      "statuses": {
+        "submitted": 12
+      },
+      "valid_submissions": 12
+    },
+    "window_scope_original": {
+      "decision_objections": 5,
+      "draw_consistency": {
+        "0_of_2": 1,
+        "1_of_2": 5,
+        "2_of_2": 0
+      },
+      "independent_queries": 12,
+      "localized_challenges": 5,
+      "localized_without_query": 5,
+      "scheduled": 12,
+      "statuses": {
+        "submitted": 12
+      },
+      "valid_submissions": 12
+    }
+  },
+  "generalization": "new wording was never seen while revising the Reviewer prompt",
+  "inference": "descriptive development controls; no independent-item intervals",
+  "known_or_reserved_usd": 0.321263172,
+  "method": "planted_interpretations_3",
+  "paired_controls": "each base has one control and six single section corruptions: three errors, each in its original wording and in a new wording",
+  "plan_sha256": "cdad6972bd12c16b6591c9bccf2bddfbf5e7fef3449d5546399117cd0036ae8f",
+  "scheduled": 84,
+  "secondary_endpoint": "exact location of a non-accept challenge without the query rule",
+  "semantic_accuracy_claim": "excluded",
+  "source_sessions": 2,
+  "source_sha256": "cc242257178c7e77d5f1277db411fc321dbea23fd8308e52c11d32f19e69e4d4",
+  "status": "finished"
+}

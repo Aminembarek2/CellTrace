@@ -1,0 +1,79 @@
+{
+  "label": "Descriptive companion to the frozen summary. No rescoring.",
+  "plan_sha256": "cdad6972bd12c16b6591c9bccf2bddfbf5e7fef3449d5546399117cd0036ae8f",
+  "decisions_by_family": {
+    "capacity_conflation_original": {
+      "unresolved": 10,
+      "request_more_evidence": 1,
+      "accept": 1
+    },
+    "capacity_conflation_new": {
+      "unresolved": 12
+    },
+    "physical_cause_new": {
+      "request_more_evidence": 2,
+      "unresolved": 10
+    },
+    "correct_control": {
+      "accept": 12
+    },
+    "window_scope_original": {
+      "accept": 7,
+      "request_more_evidence": 5
+    },
+    "window_scope_new": {
+      "request_more_evidence": 4,
+      "unresolved": 6,
+      "accept": 2
+    },
+    "physical_cause_original": {
+      "unresolved": 12
+    }
+  },
+  "disputed_paths_by_family": {
+    "capacity_conflation_original": {
+      "/decision_summary": 11,
+      "/missing_evidence/0": 1,
+      "/hypotheses/0": 1,
+      "/eligibility": 1,
+      "(none)": 1
+    },
+    "capacity_conflation_new": {
+      "/decision_summary": 12,
+      "/eligibility": 1,
+      "/hypotheses/0": 1
+    },
+    "physical_cause_new": {
+      "/decision_summary": 12,
+      "/hypotheses/0": 1,
+      "/eligibility": 1,
+      "/factual_claims/1/relative_decrease": 1,
+      "/cause_status": 2,
+      "/hypotheses": 1
+    },
+    "correct_control": {
+      "(none)": 12
+    },
+    "window_scope_original": {
+      "(none)": 7,
+      "/decision_summary": 5,
+      "/factual_claims/2/unit": 1
+    },
+    "window_scope_new": {
+      "/decision_summary": 10,
+      "/observation_patterns/0": 1,
+      "(none)": 2
+    },
+    "physical_cause_original": {
+      "/decision_summary": 12
+    }
+  },
+  "objections_to_a_different_section": {},
+  "provider_attempts": 240,
+  "attempts_with_unknown_usage": 0,
+  "usd_per_conversation": {
+    "minimum": 0.0015312,
+    "median": 0.003652626,
+    "maximum": 0.008392674
+  }
+}

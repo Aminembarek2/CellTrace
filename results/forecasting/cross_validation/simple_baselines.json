@@ -1,0 +1,46 @@
+{
+ "loso": {
+  "rows": 15714,
+  "mae": {
+   "persistence": 27.06813633490306,
+   "trailing_mean": 26.96237775545899,
+   "harmonic_mean_5": 36.55413220717808,
+   "weighted_mean_half": 26.395759478121228,
+   "history_only_mean": 19.510448989915464,
+   "combined_mean": 19.936469704553613
+  },
+  "harmonic_fallback_rows": 0,
+  "weighted_fallback_rows": 0,
+  "history_only_skill_against": {
+   "persistence": 0.27920974135342747,
+   "trailing_mean": 0.27638247758155376,
+   "harmonic_mean_5": 0.4662587288535268,
+   "weighted_mean_half": 0.26084911456754345
+  },
+  "best_simple_baseline": "weighted_mean_half",
+  "history_only_skill_against_best_simple": 0.26084911456754345,
+  "sessions_where_history_only_beats_best_simple": "14 of 21"
+ },
+ "forward": {
+  "rows": 9799,
+  "mae": {
+   "persistence": 29.269130350035724,
+   "trailing_mean": 27.646467888049965,
+   "harmonic_mean_5": 39.558699055014614,
+   "weighted_mean_half": 28.443916878204917,
+   "history_only_mean": 20.341863529095377,
+   "combined_mean": 20.77224865807328
+  },
+  "harmonic_fallback_rows": 0,
+  "weighted_fallback_rows": 0,
+  "history_only_skill_against": {
+   "persistence": 0.3050062203481031,
+   "trailing_mean": 0.26421474122963695,
+   "harmonic_mean_5": 0.4857802704581924,
+   "weighted_mean_half": 0.28484309611091985
+  },
+  "best_simple_baseline": "trailing_mean",
+  "history_only_skill_against_best_simple": 0.26421474122963695,
+  "sessions_where_history_only_beats_best_simple": "10 of 14"
+ }
+}

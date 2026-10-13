@@ -1,0 +1,10 @@
+runtime:
+  provider: openrouter
+  enable_live_calls: false
+  model_id: z-ai/glm-5.3-flash
+  model_effort: high
+  verified_rate_card: configs/rate_cards/z-ai_glm-5.3-flash.yaml
+  verified_endpoint_record: artifacts/public/environment/openrouter_metadata/z-ai_glm-5.3-flash.json
+  verified_capability_record: null
+  run_store: artifacts/private/openrouter/runs.sqlite3
+  checkpoint_store: artifacts/private/openrouter/checkpoints.sqlite3

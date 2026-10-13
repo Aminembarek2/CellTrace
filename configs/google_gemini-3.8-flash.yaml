@@ -1,0 +1,10 @@
+runtime:
+  provider: openrouter
+  enable_live_calls: false
+  model_id: google/gemini-3.8-flash
+  model_effort: high
+  verified_rate_card: configs/rate_cards/google_gemini-3.8-flash.yaml
+  verified_endpoint_record: artifacts/public/environment/openrouter_metadata/google_gemini-3.8-flash.json
+  verified_capability_record: null
+  run_store: artifacts/private/openrouter/runs.sqlite3
+  checkpoint_store: artifacts/private/openrouter/checkpoints.sqlite3

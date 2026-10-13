@@ -1,0 +1,4137 @@
+{
+  "calibrated_interval": {
+    "assumption": "exchangeable sessions; approximate for few calibration sessions",
+    "combined": {
+      "global_cqr": {
+        "coverage_by_group": {
+          "predicted_level_quartile": {
+            "0": {
+              "coverage": 0.8426692644909888,
+              "rows": 4106
+            },
+            "1": {
+              "coverage": 0.8072845882033162,
+              "rows": 3679
+            },
+            "2": {
+              "coverage": 0.7986859395532194,
+              "rows": 3805
+            },
+            "3": {
+              "coverage": 0.7449078564500485,
+              "rows": 4124
+            }
+          },
+          "technology": {
+            "5G": {
+              "coverage": 0.7798406000937647,
+              "rows": 10665
+            },
+            "HSDPA": {
+              "coverage": 0.8125,
+              "rows": 16
+            },
+            "HSPA+": {
+              "coverage": 0.8589065255731922,
+              "rows": 1701
+            },
+            "HSUPA": {
+              "coverage": 0.7142857142857143,
+              "rows": 14
+            },
+            "LTE": {
+              "coverage": 0.8255357681859342,
+              "rows": 3313
+            },
+            "UMTS": {
+              "coverage": 1.0,
+              "rows": 5
+            }
+          }
+        },
+        "mean_width_mbps": 58.20133981397626,
+        "row_coverage": {
+          "interval_95": [
+            0.7838288482797362,
+            0.8173313153294292
+          ],
+          "sessions": 21,
+          "value": 0.7980781468753977
+        },
+        "session_coverage_minimum": 0.711864406779661,
+        "session_coverage_quartiles": [
+          0.7807407407407407,
+          0.7936802973977695,
+          0.846
+        ],
+        "sessions": 21,
+        "sessions_below_nominal": 11,
+        "winkler_mean": 90.46429898789259,
+        "worst_group_coverage": {
+          "predicted_level_quartile": 0.7449078564500485,
+          "technology": 0.7142857142857143
+        }
+      },
+      "mondrian_cqr": {
+        "coverage_by_group": {
+          "predicted_level_quartile": {
+            "0": {
+              "coverage": 0.820019483682416,
+              "rows": 4106
+            },
+            "1": {
+              "coverage": 0.8431639032345746,
+              "rows": 3679
+            },
+            "2": {
+              "coverage": 0.8197109067017083,
+              "rows": 3805
+            },
+            "3": {
+              "coverage": 0.7931619786614937,
+              "rows": 4124
+            }
+          },
+          "technology": {
+            "5G": {
+              "coverage": 0.8111579934364744,
+              "rows": 10665
+            },
+            "HSDPA": {
+              "coverage": 0.8125,
+              "rows": 16
+            },
+            "HSPA+": {
+              "coverage": 0.829512051734274,
+              "rows": 1701
+            },
+            "HSUPA": {
+              "coverage": 0.7142857142857143,
+              "rows": 14
+            },
+            "LTE": {
+              "coverage": 0.8357983700573498,
+              "rows": 3313
+            },
+            "UMTS": {
+              "coverage": 1.0,
+              "rows": 5
+            }
+          }
+        },
+        "mean_width_mbps": 60.884878720544044,
+        "row_coverage": {
+          "interval_95": [
+            0.8049508610493619,
+            0.832993026424798
+          ],
+          "sessions": 21,
+          "value": 0.8183148784523355
+        },
+        "session_coverage_minimum": 0.7401129943502824,
+        "session_coverage_quartiles": [
+          0.8003565062388592,
+          0.8202716823406478,
+          0.8517520215633423
+        ],
+        "sessions": 21,
+        "sessions_below_nominal": 5,
+        "winkler_mean": 90.25923324729386,
+        "worst_group_coverage": {
+          "predicted_level_quartile": 0.7931619786614937,
+          "technology": 0.7142857142857143
+        }
+      },
+      "mondrian_fallback_quartiles_max": 0,
+      "raw": {
+        "coverage_by_group": {
+          "predicted_level_quartile": {
+            "0": {
+              "coverage": 0.7306380905991232,
+              "rows": 4106
+            },
+            "1": {
+              "coverage": 0.7648817613481924,
+              "rows": 3679
+            },
+            "2": {
+              "coverage": 0.7779237844940867,
+              "rows": 3805
+            },
+            "3": {
+              "coverage": 0.7386032977691561,
+              "rows": 4124
+            }
+          },
+          "technology": {
+            "5G": {
+              "coverage": 0.7542428504453821,
+              "rows": 10665
+            },
+            "HSDPA": {
+              "coverage": 0.625,
+              "rows": 16
+            },
+            "HSPA+": {
+              "coverage": 0.715461493239271,
+              "rows": 1701
+            },
+            "HSUPA": {
+              "coverage": 0.6428571428571429,
+              "rows": 14
+            },
+            "LTE": {
+              "coverage": 0.7654693631150015,
+              "rows": 3313
+            },
+            "UMTS": {
+              "coverage": 0.8,
+              "rows": 5
+            }
+          }
+        },
+        "mean_width_mbps": 57.24003794539111,
+        "row_coverage": {
+          "interval_95": [
+            0.739496581618142,
+            0.7656929649862251
+          ],
+          "sessions": 21,
+          "value": 0.7521954944635357
+        },
+        "session_coverage_minimum": 0.6396396396396397,
+        "session_coverage_quartiles": [
+          0.7277310924369748,
+          0.7544006705783739,
+          0.7701863354037267
+        ],
+        "sessions": 21,
+        "sessions_below_nominal": 18,
+        "winkler_mean": 90.58187925840465,
+        "worst_group_coverage": {
+          "predicted_level_quartile": 0.7306380905991232,
+          "technology": 0.625
+        }
+      }
+    },
+    "guarantee_in_this_archive": "not established; report empirical coverage only",
+    "history_only": {
+      "global_cqr": {
+        "coverage_by_group": {
+          "predicted_level_quartile": {
+            "0": {
+              "coverage": 0.8496831432192649,
+              "rows": 3945
+            },
+            "1": {
+              "coverage": 0.8116883116883117,
+              "rows": 3850
+            },
+            "2": {
+              "coverage": 0.7933106872223674,
+              "rows": 3827
+            },
+            "3": {
+              "coverage": 0.7458455522971652,
+              "rows": 4092
+            }
+          },
+          "technology": {
+            "5G": {
+              "coverage": 0.7760900140646976,
+              "rows": 10665
+            },
+            "HSDPA": {
+              "coverage": 0.75,
+              "rows": 16
+            },
+            "HSPA+": {
+              "coverage": 0.9035861258083481,
+              "rows": 1701
+            },
+            "HSUPA": {
+              "coverage": 0.8571428571428571,
+              "rows": 14
+            },
+            "LTE": {
+              "coverage": 0.8216118321762753,
+              "rows": 3313
+            },
+            "UMTS": {
+              "coverage": 1.0,
+              "rows": 5
+            }
+          }
+        },
+        "mean_width_mbps": 55.517151598862505,
+        "row_coverage": {
+          "interval_95": [
+            0.7822946634201399,
+            0.8216334320008504
+          ],
+          "sessions": 21,
+          "value": 0.7996054473717704
+        },
+        "session_coverage_minimum": 0.7005649717514124,
+        "session_coverage_quartiles": [
+          0.7639405204460966,
+          0.7941483803552769,
+          0.8678678678678678
+        ],
+        "sessions": 21,
+        "sessions_below_nominal": 12,
+        "winkler_mean": 88.97950681969867,
+        "worst_group_coverage": {
+          "predicted_level_quartile": 0.7458455522971652,
+          "technology": 0.75
+        }
+      },
+      "mondrian_cqr": {
+        "coverage_by_group": {
+          "predicted_level_quartile": {
+            "0": {
+              "coverage": 0.8420785804816223,
+              "rows": 3945
+            },
+            "1": {
+              "coverage": 0.8267532467532468,
+              "rows": 3850
+            },
+            "2": {
+              "coverage": 0.8048079435589235,
+              "rows": 3827
+            },
+            "3": {
+              "coverage": 0.8018084066471163,
+              "rows": 4092
+            }
+          },
+          "technology": {
+            "5G": {
+              "coverage": 0.8027191748710736,
+              "rows": 10665
+            },
+            "HSDPA": {
+              "coverage": 0.6875,
+              "rows": 16
+            },
+            "HSPA+": {
+              "coverage": 0.892416225749559,
+              "rows": 1701
+            },
+            "HSUPA": {
+              "coverage": 0.7857142857142857,
+              "rows": 14
+            },
+            "LTE": {
+              "coverage": 0.8330817989737398,
+              "rows": 3313
+            },
+            "UMTS": {
+              "coverage": 1.0,
+              "rows": 5
+            }
+          }
+        },
+        "mean_width_mbps": 58.485643666481415,
+        "row_coverage": {
+          "interval_95": [
+            0.8039984523975803,
+            0.8363354985993445
+          ],
+          "sessions": 21,
+          "value": 0.8187603410971108
+        },
+        "session_coverage_minimum": 0.7457627118644068,
+        "session_coverage_quartiles": [
+          0.7932773109243697,
+          0.8198198198198198,
+          0.8633540372670807
+        ],
+        "sessions": 21,
+        "sessions_below_nominal": 8,
+        "winkler_mean": 88.64191531411795,
+        "worst_group_coverage": {
+          "predicted_level_quartile": 0.8018084066471163,
+          "technology": 0.6875
+        }
+      },
+      "mondrian_fallback_quartiles_max": 0,
+      "raw": {
+        "coverage_by_group": {
+          "predicted_level_quartile": {
+            "0": {
+              "coverage": 0.738149556400507,
+              "rows": 3945
+            },
+            "1": {
+              "coverage": 0.7701298701298701,
+              "rows": 3850
+            },
+            "2": {
+              "coverage": 0.7750195975960282,
+              "rows": 3827
+            },
+            "3": {
+              "coverage": 0.7402248289345064,
+              "rows": 4092
+            }
+          },
+          "technology": {
+            "5G": {
+              "coverage": 0.7522737927801219,
+              "rows": 10665
+            },
+            "HSDPA": {
+              "coverage": 0.5,
+              "rows": 16
+            },
+            "HSPA+": {
+              "coverage": 0.7724867724867724,
+              "rows": 1701
+            },
+            "HSUPA": {
+              "coverage": 0.6428571428571429,
+              "rows": 14
+            },
+            "LTE": {
+              "coverage": 0.7585270147902203,
+              "rows": 3313
+            },
+            "UMTS": {
+              "coverage": 1.0,
+              "rows": 5
+            }
+          }
+        },
+        "mean_width_mbps": 54.59841600465221,
+        "row_coverage": {
+          "interval_95": [
+            0.7389218783924997,
+            0.773862875284179
+          ],
+          "sessions": 21,
+          "value": 0.7555046455390098
+        },
+        "session_coverage_minimum": 0.6906906906906907,
+        "session_coverage_quartiles": [
+          0.7249224405377456,
+          0.7350674373795761,
+          0.7974816369359916
+        ],
+        "sessions": 21,
+        "sessions_below_nominal": 16,
+        "winkler_mean": 89.06258069005729,
+        "worst_group_coverage": {
+          "predicted_level_quartile": 0.738149556400507,
+          "technology": 0.5
+        }
+      }
+    },
+    "method": "cross conformal CQR on inner session folds with equal session weights (Dunn, Wasserman and Ramdas, CDF pooling), globally and per predicted level quartile (Mondrian)",
+    "nominal_row_coverage": 0.8
+  },
+  "claim_scope": "exploratory_nested_session_cross_validation",
+  "configuration_selection": {
+    "forward_chaining": {
+      "combined": {
+        "folds_by_index": {
+          "0": 8,
+          "5": 6
+        },
+        "mean_inner_mae_by_index": [
+          20.12520247801137,
+          20.536546903198673,
+          20.683598252409173,
+          20.37472268761682,
+          20.23310134301919,
+          20.13320772932275
+        ]
+      },
+      "history_only": {
+        "folds_by_index": {
+          "0": 11,
+          "1": 1,
+          "3": 1,
+          "4": 1
+        },
+        "mean_inner_mae_by_index": [
+          19.54946634929728,
+          19.708746483612007,
+          19.850406481242175,
+          19.7204830264532,
+          19.8098192574534,
+          19.80389840872734
+        ]
+      }
+    },
+    "leave_one_session_out": {
+      "combined": {
+        "folds_by_index": {
+          "0": 14,
+          "3": 7
+        },
+        "mean_inner_mae_by_index": [
+          20.150805645765885,
+          20.442048149777005,
+          20.628813394620703,
+          20.239263350367953,
+          20.417021009634443,
+          20.39464535641884
+        ]
+      },
+      "history_only": {
+        "folds_by_index": {
+          "0": 8,
+          "1": 2,
+          "3": 11
+        },
+        "mean_inner_mae_by_index": [
+          19.783998795140292,
+          19.834754951940685,
+          20.000337351026772,
+          19.779242145461723,
+          20.11632883043913,
+          20.10916610837132
+        ]
+      }
+    }
+  },
+  "configuration_sha256": "6d620a444f395ff868c3b549f604cfcb9bb8942c0e236827dee22377be85b183",
+  "configurations": [
+    {
+      "learning_rate": 0.05,
+      "max_iter": 200,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 40
+    },
+    {
+      "learning_rate": 0.05,
+      "max_iter": 400,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 40
+    },
+    {
+      "learning_rate": 0.1,
+      "max_iter": 200,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 20
+    },
+    {
+      "learning_rate": 0.05,
+      "max_iter": 200,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 80
+    },
+    {
+      "learning_rate": 0.1,
+      "max_iter": 100,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 100
+    },
+    {
+      "l2_regularization": 1.0,
+      "learning_rate": 0.03,
+      "max_iter": 300,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 100
+    }
+  ],
+  "deployability": {
+    "cautious_quantile_0.1": {
+      "configuration": {
+        "learning_rate": 0.05,
+        "max_iter": 200,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 40
+      },
+      "features": 45,
+      "fit_sessions": 21,
+      "pickle_bytes": 412493,
+      "single_prediction_median_ms": 3.1287064994103275,
+      "timed_operation": "estimator prediction on precomputed encoded features only",
+      "warning_calibration_status": "sigmoid_inner_session_folds"
+    },
+    "warning_sigmoid": {
+      "configuration": {
+        "learning_rate": 0.05,
+        "max_iter": 200,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 40
+      },
+      "features": 45,
+      "fit_sessions": 21,
+      "pickle_bytes": 1043238,
+      "single_prediction_median_ms": 3.7957029999233782,
+      "timed_operation": "estimator prediction on precomputed encoded features only",
+      "warning_calibration_status": "sigmoid_inner_session_folds"
+    }
+  },
+  "deployability_configuration_index": 0,
+  "exclusions": {
+    "candidate_rows": 45759,
+    "excluded_no_valid_downlink_in_history": 14,
+    "excluded_target_bin_absent": 0,
+    "excluded_target_bin_incomplete": 21,
+    "excluded_target_bin_without_valid_downlink": 29914,
+    "excluded_target_window_extends_beyond_segment": 96,
+    "feature_rows": 15714
+  },
+  "exclusions_by_session": {
+    "ses_00394e41335a": {
+      "candidate_rows": 3680,
+      "excluded_no_valid_downlink_in_history": 1,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 2636,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 1038
+    },
+    "ses_14cc2e553380": {
+      "candidate_rows": 850,
+      "excluded_no_valid_downlink_in_history": 1,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 492,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 352
+    },
+    "ses_2ac9b8a1606d": {
+      "candidate_rows": 2597,
+      "excluded_no_valid_downlink_in_history": 0,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 1399,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 1193
+    },
+    "ses_3e3a704972f8": {
+      "candidate_rows": 1163,
+      "excluded_no_valid_downlink_in_history": 1,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 657,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 500
+    },
+    "ses_4f55d7fbff9e": {
+      "candidate_rows": 3498,
+      "excluded_no_valid_downlink_in_history": 1,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 2525,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 967
+    },
+    "ses_5cae83b6f6a7": {
+      "candidate_rows": 886,
+      "excluded_no_valid_downlink_in_history": 0,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 592,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 289
+    },
+    "ses_5d37249c13bd": {
+      "candidate_rows": 1719,
+      "excluded_no_valid_downlink_in_history": 0,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 1176,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 538
+    },
+    "ses_62c0837103ca": {
+      "candidate_rows": 2622,
+      "excluded_no_valid_downlink_in_history": 2,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 1448,
+      "excluded_target_window_extends_beyond_segment": 8,
+      "feature_rows": 1163
+    },
+    "ses_6333ece966b9": {
+      "candidate_rows": 2282,
+      "excluded_no_valid_downlink_in_history": 1,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 1323,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 953
+    },
+    "ses_65cfb9449726": {
+      "candidate_rows": 1352,
+      "excluded_no_valid_downlink_in_history": 1,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 751,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 595
+    },
+    "ses_69dc3e27d723": {
+      "candidate_rows": 394,
+      "excluded_no_valid_downlink_in_history": 0,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 228,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 161
+    },
+    "ses_8904035cae33": {
+      "candidate_rows": 2668,
+      "excluded_no_valid_downlink_in_history": 1,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 1920,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 742
+    },
+    "ses_93e7fd02becb": {
+      "candidate_rows": 2271,
+      "excluded_no_valid_downlink_in_history": 0,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 1570,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 696
+    },
+    "ses_950e3396c3d5": {
+      "candidate_rows": 6654,
+      "excluded_no_valid_downlink_in_history": 0,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 4735,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 1914
+    },
+    "ses_9f9a98b92bcf": {
+      "candidate_rows": 2087,
+      "excluded_no_valid_downlink_in_history": 1,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 1448,
+      "excluded_target_window_extends_beyond_segment": 8,
+      "feature_rows": 629
+    },
+    "ses_cbdffbc8b8a4": {
+      "candidate_rows": 1825,
+      "excluded_no_valid_downlink_in_history": 1,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 1258,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 561
+    },
+    "ses_cfc2295da8ce": {
+      "candidate_rows": 3774,
+      "excluded_no_valid_downlink_in_history": 0,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 2564,
+      "excluded_target_window_extends_beyond_segment": 8,
+      "feature_rows": 1201
+    },
+    "ses_d45a62bd0948": {
+      "candidate_rows": 997,
+      "excluded_no_valid_downlink_in_history": 1,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 658,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 333
+    },
+    "ses_eb4868190ab5": {
+      "candidate_rows": 387,
+      "excluded_no_valid_downlink_in_history": 1,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 204,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 177
+    },
+    "ses_f505a17cafdc": {
+      "candidate_rows": 2950,
+      "excluded_no_valid_downlink_in_history": 0,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 1595,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 1350
+    },
+    "ses_fce1957b3da7": {
+      "candidate_rows": 1103,
+      "excluded_no_valid_downlink_in_history": 1,
+      "excluded_target_bin_absent": 0,
+      "excluded_target_bin_incomplete": 1,
+      "excluded_target_bin_without_valid_downlink": 735,
+      "excluded_target_window_extends_beyond_segment": 4,
+      "feature_rows": 362
+    }
+  },
+  "feature_specification_hash": "77052540d95adf1cd076b9256e7ed271bddbebed9397d03fef40dc20c03d50f4",
+  "figures": {
+    "skill": "forecast_skill.png",
+    "warning": "early_warning.png"
+  },
+  "fold_manifest_sha256": "052aa30f7c9a4c0c13280676343a632df330e69da9456626085d96057b169d48",
+  "forward_chaining": {
+    "calibrated_interval": {
+      "assumption": "exchangeable sessions; approximate for few calibration sessions",
+      "combined": {
+        "global_cqr": {
+          "coverage_by_group": {
+            "predicted_level_quartile": {
+              "0": {
+                "coverage": 0.8726431874777659,
+                "rows": 2811
+              },
+              "1": {
+                "coverage": 0.7911051212938005,
+                "rows": 1484
+              },
+              "2": {
+                "coverage": 0.7898671096345515,
+                "rows": 2408
+              },
+              "3": {
+                "coverage": 0.7580749354005168,
+                "rows": 3096
+              }
+            },
+            "technology": {
+              "5G": {
+                "coverage": 0.7802985074626866,
+                "rows": 6700
+              },
+              "HSPA+": {
+                "coverage": 0.9102773246329527,
+                "rows": 1226
+              },
+              "HSUPA": {
+                "coverage": 0.7272727272727273,
+                "rows": 11
+              },
+              "LTE": {
+                "coverage": 0.8182795698924731,
+                "rows": 1860
+              },
+              "UMTS": {
+                "coverage": 1.0,
+                "rows": 2
+              }
+            }
+          },
+          "mean_width_mbps": 62.74910398632242,
+          "row_coverage": {
+            "interval_95": [
+              0.7776557027977085,
+              0.834947144107542
+            ],
+            "sessions": 14,
+            "value": 0.8037554852535973
+          },
+          "session_coverage_minimum": 0.7196531791907514,
+          "session_coverage_quartiles": [
+            0.7772450911424987,
+            0.8074580034528664,
+            0.8634572072072072
+          ],
+          "sessions": 14,
+          "sessions_below_nominal": 5,
+          "winkler_mean": 97.20191838513495,
+          "worst_group_coverage": {
+            "predicted_level_quartile": 0.7580749354005168,
+            "technology": 0.7272727272727273
+          }
+        },
+        "mondrian_cqr": {
+          "coverage_by_group": {
+            "predicted_level_quartile": {
+              "0": {
+                "coverage": 0.8801138384916399,
+                "rows": 2811
+              },
+              "1": {
+                "coverage": 0.8039083557951483,
+                "rows": 1484
+              },
+              "2": {
+                "coverage": 0.8060631229235881,
+                "rows": 2408
+              },
+              "3": {
+                "coverage": 0.7758397932816538,
+                "rows": 3096
+              }
+            },
+            "technology": {
+              "5G": {
+                "coverage": 0.7947761194029851,
+                "rows": 6700
+              },
+              "HSPA+": {
+                "coverage": 0.9127243066884176,
+                "rows": 1226
+              },
+              "HSUPA": {
+                "coverage": 0.8181818181818182,
+                "rows": 11
+              },
+              "LTE": {
+                "coverage": 0.8360215053763441,
+                "rows": 1860
+              },
+              "UMTS": {
+                "coverage": 1.0,
+                "rows": 2
+              }
+            }
+          },
+          "mean_width_mbps": 64.08229437903458,
+          "row_coverage": {
+            "interval_95": [
+              0.7836094767121798,
+              0.8496639489049549
+            ],
+            "sessions": 14,
+            "value": 0.817430350035718
+          },
+          "session_coverage_minimum": 0.6926782273603083,
+          "session_coverage_quartiles": [
+            0.8022325015473448,
+            0.825006825006825,
+            0.8747174786539427
+          ],
+          "sessions": 14,
+          "sessions_below_nominal": 3,
+          "winkler_mean": 97.23757140426345,
+          "worst_group_coverage": {
+            "predicted_level_quartile": 0.7758397932816538,
+            "technology": 0.7947761194029851
+          }
+        },
+        "mondrian_fallback_quartiles_max": 0,
+        "raw": {
+          "coverage_by_group": {
+            "predicted_level_quartile": {
+              "0": {
+                "coverage": 0.752045535396656,
+                "rows": 2811
+              },
+              "1": {
+                "coverage": 0.7526954177897575,
+                "rows": 1484
+              },
+              "2": {
+                "coverage": 0.7720099667774086,
+                "rows": 2408
+              },
+              "3": {
+                "coverage": 0.752906976744186,
+                "rows": 3096
+              }
+            },
+            "technology": {
+              "5G": {
+                "coverage": 0.7586567164179104,
+                "rows": 6700
+              },
+              "HSPA+": {
+                "coverage": 0.765905383360522,
+                "rows": 1226
+              },
+              "HSUPA": {
+                "coverage": 0.36363636363636365,
+                "rows": 11
+              },
+              "LTE": {
+                "coverage": 0.7489247311827957,
+                "rows": 1860
+              },
+              "UMTS": {
+                "coverage": 1.0,
+                "rows": 2
+              }
+            }
+          },
+          "mean_width_mbps": 61.75994007014651,
+          "row_coverage": {
+            "interval_95": [
+              0.7389410863165189,
+              0.7780610259935874
+            ],
+            "sessions": 14,
+            "value": 0.7573221757322176
+          },
+          "session_coverage_minimum": 0.6576576576576577,
+          "session_coverage_quartiles": [
+            0.7447865932449357,
+            0.7613442727300892,
+            0.7980841066373073
+          ],
+          "sessions": 14,
+          "sessions_below_nominal": 10,
+          "winkler_mean": 97.26098742413004,
+          "worst_group_coverage": {
+            "predicted_level_quartile": 0.752045535396656,
+            "technology": 0.36363636363636365
+          }
+        }
+      },
+      "guarantee_in_this_archive": "not established; report empirical coverage only",
+      "history_only": {
+        "global_cqr": {
+          "coverage_by_group": {
+            "predicted_level_quartile": {
+              "0": {
+                "coverage": 0.8867536032944406,
+                "rows": 2914
+              },
+              "1": {
+                "coverage": 0.803218727139722,
+                "rows": 1367
+              },
+              "2": {
+                "coverage": 0.8055315471045809,
+                "rows": 2314
+              },
+              "3": {
+                "coverage": 0.7618601747815231,
+                "rows": 3204
+              }
+            },
+            "technology": {
+              "5G": {
+                "coverage": 0.7856716417910448,
+                "rows": 6700
+              },
+              "HSPA+": {
+                "coverage": 0.9453507340946167,
+                "rows": 1226
+              },
+              "HSUPA": {
+                "coverage": 0.7272727272727273,
+                "rows": 11
+              },
+              "LTE": {
+                "coverage": 0.8354838709677419,
+                "rows": 1860
+              },
+              "UMTS": {
+                "coverage": 1.0,
+                "rows": 2
+              }
+            }
+          },
+          "mean_width_mbps": 60.214415041975826,
+          "row_coverage": {
+            "interval_95": [
+              0.7794521040314655,
+              0.850284650313542
+            ],
+            "sessions": 14,
+            "value": 0.8150831717522196
+          },
+          "session_coverage_minimum": 0.6965317919075145,
+          "session_coverage_quartiles": [
+            0.7794674688057041,
+            0.8186111021662427,
+            0.8876689189189189
+          ],
+          "sessions": 14,
+          "sessions_below_nominal": 6,
+          "winkler_mean": 95.05075901886505,
+          "worst_group_coverage": {
+            "predicted_level_quartile": 0.7618601747815231,
+            "technology": 0.7272727272727273
+          }
+        },
+        "mondrian_cqr": {
+          "coverage_by_group": {
+            "predicted_level_quartile": {
+              "0": {
+                "coverage": 0.8754289636238847,
+                "rows": 2914
+              },
+              "1": {
+                "coverage": 0.8237015362106803,
+                "rows": 1367
+              },
+              "2": {
+                "coverage": 0.8167675021607606,
+                "rows": 2314
+              },
+              "3": {
+                "coverage": 0.8039950062421972,
+                "rows": 3204
+              }
+            },
+            "technology": {
+              "5G": {
+                "coverage": 0.8107462686567164,
+                "rows": 6700
+              },
+              "HSPA+": {
+                "coverage": 0.9290375203915171,
+                "rows": 1226
+              },
+              "HSUPA": {
+                "coverage": 0.7272727272727273,
+                "rows": 11
+              },
+              "LTE": {
+                "coverage": 0.8397849462365592,
+                "rows": 1860
+              },
+              "UMTS": {
+                "coverage": 1.0,
+                "rows": 2
+              }
+            }
+          },
+          "mean_width_mbps": 62.982845411509956,
+          "row_coverage": {
+            "interval_95": [
+              0.7943967020850231,
+              0.8624747615740154
+            ],
+            "sessions": 14,
+            "value": 0.8310031635881212
+          },
+          "session_coverage_minimum": 0.7129094412331407,
+          "session_coverage_quartiles": [
+            0.7957793044059925,
+            0.8395006923328165,
+            0.8810736677115987
+          ],
+          "sessions": 14,
+          "sessions_below_nominal": 4,
+          "winkler_mean": 95.09077326666596,
+          "worst_group_coverage": {
+            "predicted_level_quartile": 0.8039950062421972,
+            "technology": 0.7272727272727273
+          }
+        },
+        "mondrian_fallback_quartiles_max": 0,
+        "raw": {
+          "coverage_by_group": {
+            "predicted_level_quartile": {
+              "0": {
+                "coverage": 0.7786547700754975,
+                "rows": 2914
+              },
+              "1": {
+                "coverage": 0.7527432333577176,
+                "rows": 1367
+              },
+              "2": {
+                "coverage": 0.7899740708729472,
+                "rows": 2314
+              },
+              "3": {
+                "coverage": 0.7543695380774033,
+                "rows": 3204
+              }
+            },
+            "technology": {
+              "5G": {
+                "coverage": 0.7611940298507462,
+                "rows": 6700
+              },
+              "HSPA+": {
+                "coverage": 0.8205546492659054,
+                "rows": 1226
+              },
+              "HSUPA": {
+                "coverage": 0.5454545454545454,
+                "rows": 11
+              },
+              "LTE": {
+                "coverage": 0.7682795698924731,
+                "rows": 1860
+              },
+              "UMTS": {
+                "coverage": 1.0,
+                "rows": 2
+              }
+            }
+          },
+          "mean_width_mbps": 59.04559958945787,
+          "row_coverage": {
+            "interval_95": [
+              0.7394735562783473,
+              0.7972209671611912
+            ],
+            "sessions": 14,
+            "value": 0.7697724257577304
+          },
+          "session_coverage_minimum": 0.6801541425818882,
+          "session_coverage_quartiles": [
+            0.7376702559942796,
+            0.7645368492224476,
+            0.8113725084284616
+          ],
+          "sessions": 14,
+          "sessions_below_nominal": 9,
+          "winkler_mean": 95.10550145739212,
+          "worst_group_coverage": {
+            "predicted_level_quartile": 0.7527432333577176,
+            "technology": 0.5454545454545454
+          }
+        }
+      },
+      "method": "cross conformal CQR on inner session folds with equal session weights (Dunn, Wasserman and Ramdas, CDF pooling), globally and per predicted level quartile (Mondrian)",
+      "nominal_row_coverage": 0.8
+    },
+    "minimum_training_sessions": 7,
+    "point": {
+      "combined_mean": {
+        "mae_mbps": 20.77224865807328,
+        "session_mae_median_mbps": 17.972491771902895,
+        "sessions_better_than_persistence": 11,
+        "skill_vs_persistence": {
+          "interval_95": [
+            0.20695972935548201,
+            0.34726186580001855
+          ],
+          "sessions": 14,
+          "value": 0.29030181595238524
+        }
+      },
+      "history_only_mean": {
+        "mae_mbps": 20.341863529095377,
+        "session_mae_median_mbps": 17.69916034017266,
+        "sessions_better_than_persistence": 10,
+        "skill_vs_persistence": {
+          "interval_95": [
+            0.22526533300887033,
+            0.3610630645435172
+          ],
+          "sessions": 14,
+          "value": 0.305006220348103
+        }
+      },
+      "persistence": {
+        "mae_mbps": 29.269130350035724,
+        "session_mae_median_mbps": 22.211716916338872,
+        "sessions_better_than_persistence": 0,
+        "skill_vs_persistence": {
+          "interval_95": [
+            0.0,
+            0.0
+          ],
+          "sessions": 14,
+          "value": 0.0
+        }
+      },
+      "trailing_mean": {
+        "mae_mbps": 27.646467888049965,
+        "session_mae_median_mbps": 23.04782067656398,
+        "sessions_better_than_persistence": 9,
+        "skill_vs_persistence": {
+          "interval_95": [
+            -0.01952289331890994,
+            0.1142110430276948
+          ],
+          "sessions": 14,
+          "value": 0.055439380759864876
+        }
+      }
+    },
+    "quantile": {
+      "combined": {
+        "false_warning_by_cautious_forecast": {
+          "interval_95": [
+            0.02701169661117925,
+            0.13458078669079776
+          ],
+          "sessions": 14,
+          "value": 0.0690628732761429
+        },
+        "interval_coverage": {
+          "interval_95": [
+            0.7389410863165189,
+            0.7780610259935874
+          ],
+          "sessions": 14,
+          "value": 0.7573221757322176
+        },
+        "interval_mean_width_mbps": 61.75994007014651,
+        "low_rows": 590,
+        "missed_by_cautious_forecast": {
+          "interval_95": [
+            0.07883101083831011,
+            0.3261488768169138
+          ],
+          "sessions": 14,
+          "value": 0.17966101694915254
+        },
+        "missed_low_rows": 106,
+        "nominal_coverage": 0.8,
+        "pinball_mean": {
+          "0.1": 7.818127848091991,
+          "0.5": 20.044046941929814,
+          "0.9": 11.634069636734017
+        },
+        "quantile_score_skill_vs_naive": {
+          "interval_95": [
+            0.41463202189047993,
+            0.47712693970522174
+          ],
+          "sessions": 14,
+          "value": 0.4429962092537878
+        },
+        "winkler_mean": 97.26098742413004
+      },
+      "history_only": {
+        "false_warning_by_cautious_forecast": {
+          "interval_95": [
+            0.02923151877844175,
+            0.14742808888206776
+          ],
+          "sessions": 14,
+          "value": 0.07557823867955261
+        },
+        "interval_coverage": {
+          "interval_95": [
+            0.7394735562783473,
+            0.7972209671611912
+          ],
+          "sessions": 14,
+          "value": 0.7697724257577304
+        },
+        "interval_mean_width_mbps": 59.04559958945787,
+        "low_rows": 590,
+        "missed_by_cautious_forecast": {
+          "interval_95": [
+            0.08459150629459068,
+            0.24325044222304493
+          ],
+          "sessions": 14,
+          "value": 0.15423728813559323
+        },
+        "missed_low_rows": 91,
+        "nominal_coverage": 0.8,
+        "pinball_mean": {
+          "0.1": 7.503258077946248,
+          "0.5": 19.563554246579244,
+          "0.9": 11.517842213532175
+        },
+        "quantile_score_skill_vs_naive": {
+          "interval_95": [
+            0.4254854137815237,
+            0.4906585107954383
+          ],
+          "sessions": 14,
+          "value": 0.45585209038831964
+        },
+        "winkler_mean": 95.10550145739212
+      },
+      "naive": {
+        "false_warning_by_cautious_forecast": {
+          "interval_95": [
+            0.5330638615235527,
+            0.7991929435405412
+          ],
+          "sessions": 14,
+          "value": 0.6538169182321641
+        },
+        "interval_coverage": {
+          "interval_95": [
+            0.6576077214668283,
+            0.8487839157481653
+          ],
+          "sessions": 14,
+          "value": 0.7443616695581182
+        },
+        "interval_mean_width_mbps": 51.5790373881689,
+        "low_rows": 590,
+        "missed_by_cautious_forecast": {
+          "interval_95": [
+            0.0,
+            0.007832898172323759
+          ],
+          "sessions": 14,
+          "value": 0.001694915254237288
+        },
+        "missed_low_rows": 1,
+        "nominal_coverage": 0.8,
+        "pinball_mean": {
+          "0.1": 17.60291766738103,
+          "0.5": 29.269365175017853,
+          "0.9": 24.036111468245053
+        },
+        "quantile_score_skill_vs_naive": {
+          "interval_95": [
+            0.0,
+            0.0
+          ],
+          "sessions": 14,
+          "value": 0.0
+        },
+        "winkler_mean": 208.19514567813042
+      }
+    },
+    "rows": 9799,
+    "sessions": 14,
+    "test_sessions": [
+      "ses_9f9a98b92bcf",
+      "ses_cbdffbc8b8a4",
+      "ses_00394e41335a",
+      "ses_eb4868190ab5",
+      "ses_8904035cae33",
+      "ses_4f55d7fbff9e",
+      "ses_cfc2295da8ce",
+      "ses_93e7fd02becb",
+      "ses_5d37249c13bd",
+      "ses_d45a62bd0948",
+      "ses_fce1957b3da7",
+      "ses_5cae83b6f6a7",
+      "ses_950e3396c3d5",
+      "ses_14cc2e553380"
+    ],
+    "warning": {
+      "base_rate": 0.06021022553321768,
+      "climatology_warning": {
+        "average_precision": 0.0487885806998284,
+        "brier": 0.05678630944025472,
+        "brier_skill_vs_climatology": {
+          "interval_95": [
+            0.0,
+            0.0
+          ],
+          "sessions": 14,
+          "value": 0.0
+        },
+        "brier_skill_vs_naive": {
+          "interval_95": [
+            -0.31415186813708473,
+            -0.0753680368544361
+          ],
+          "sessions": 14,
+          "value": -0.20400539345230428
+        },
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            -0.24146984346458203,
+            -0.11116654764494167
+          ],
+          "sessions": 12,
+          "value": -0.17727247538861177
+        },
+        "precision_at_half": null,
+        "recall_at_half": 0.0,
+        "reliability": [
+          {
+            "bin": "0.0-0.1",
+            "mean_probability": 0.05512654525148866,
+            "observed_frequency": 0.06021022553321768,
+            "rows": 9799
+          },
+          {
+            "bin": "0.1-0.2",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.2-0.3",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.3-0.4",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.4-0.5",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.5-0.6",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.6-0.7",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.7-0.8",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.8-0.9",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.9-1.0",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          }
+        ]
+      },
+      "combined_warning": {
+        "average_precision": 0.6361356218349986,
+        "brier": 0.03415377427997175,
+        "brier_skill_vs_climatology": {
+          "interval_95": [
+            0.19111196596497834,
+            0.5856304049367991
+          ],
+          "sessions": 14,
+          "value": 0.3985561904510595
+        },
+        "brier_skill_vs_naive": {
+          "interval_95": [
+            0.11237820199258561,
+            0.47580822345238993
+          ],
+          "sessions": 14,
+          "value": 0.27585840944457507
+        },
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            0.1888200422361665,
+            0.4255213695499356
+          ],
+          "sessions": 12,
+          "value": 0.2989590613677691
+        },
+        "precision_at_half": 0.6109154929577465,
+        "recall_at_half": 0.588135593220339,
+        "reliability": [
+          {
+            "bin": "0.0-0.1",
+            "mean_probability": 0.011929761972158625,
+            "observed_frequency": 0.005368472425573451,
+            "rows": 8196
+          },
+          {
+            "bin": "0.1-0.2",
+            "mean_probability": 0.1437014636990356,
+            "observed_frequency": 0.13856812933025403,
+            "rows": 433
+          },
+          {
+            "bin": "0.2-0.3",
+            "mean_probability": 0.2467807492704828,
+            "observed_frequency": 0.19844357976653695,
+            "rows": 257
+          },
+          {
+            "bin": "0.3-0.4",
+            "mean_probability": 0.3434435582102951,
+            "observed_frequency": 0.18324607329842932,
+            "rows": 191
+          },
+          {
+            "bin": "0.4-0.5",
+            "mean_probability": 0.4465977050224711,
+            "observed_frequency": 0.34415584415584416,
+            "rows": 154
+          },
+          {
+            "bin": "0.5-0.6",
+            "mean_probability": 0.5523758303841266,
+            "observed_frequency": 0.40336134453781514,
+            "rows": 119
+          },
+          {
+            "bin": "0.6-0.7",
+            "mean_probability": 0.652159840352509,
+            "observed_frequency": 0.42857142857142855,
+            "rows": 112
+          },
+          {
+            "bin": "0.7-0.8",
+            "mean_probability": 0.752508616972436,
+            "observed_frequency": 0.6357615894039735,
+            "rows": 151
+          },
+          {
+            "bin": "0.8-0.9",
+            "mean_probability": 0.8427649308846266,
+            "observed_frequency": 0.8364779874213837,
+            "rows": 159
+          },
+          {
+            "bin": "0.9-1.0",
+            "mean_probability": 0.9431779913969724,
+            "observed_frequency": 0.8148148148148148,
+            "rows": 27
+          }
+        ]
+      },
+      "combined_warning_raw": {
+        "average_precision": 0.6423818047066511,
+        "brier": 0.03315589491413079,
+        "brier_skill_vs_climatology": {
+          "interval_95": [
+            0.21960016912928834,
+            0.5978367160612917
+          ],
+          "sessions": 14,
+          "value": 0.4161287246706118
+        },
+        "brier_skill_vs_naive": {
+          "interval_95": [
+            0.14666535574557948,
+            0.48889960068642857
+          ],
+          "sessions": 14,
+          "value": 0.2970158354215412
+        },
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            0.1888200422361665,
+            0.4255213695499356
+          ],
+          "sessions": 12,
+          "value": 0.2989590613677691
+        },
+        "precision_at_half": 0.6652173913043479,
+        "recall_at_half": 0.5186440677966102,
+        "reliability": [
+          {
+            "bin": "0.0-0.1",
+            "mean_probability": 0.00684140458320193,
+            "observed_frequency": 0.012862108922363847,
+            "rows": 8630
+          },
+          {
+            "bin": "0.1-0.2",
+            "mean_probability": 0.1434435141039951,
+            "observed_frequency": 0.1794871794871795,
+            "rows": 312
+          },
+          {
+            "bin": "0.2-0.3",
+            "mean_probability": 0.24623614032346305,
+            "observed_frequency": 0.22033898305084745,
+            "rows": 177
+          },
+          {
+            "bin": "0.3-0.4",
+            "mean_probability": 0.34687519679668455,
+            "observed_frequency": 0.319672131147541,
+            "rows": 122
+          },
+          {
+            "bin": "0.4-0.5",
+            "mean_probability": 0.4457809233192542,
+            "observed_frequency": 0.3979591836734694,
+            "rows": 98
+          },
+          {
+            "bin": "0.5-0.6",
+            "mean_probability": 0.5477388029868353,
+            "observed_frequency": 0.4155844155844156,
+            "rows": 77
+          },
+          {
+            "bin": "0.6-0.7",
+            "mean_probability": 0.6517044781485717,
+            "observed_frequency": 0.5,
+            "rows": 80
+          },
+          {
+            "bin": "0.7-0.8",
+            "mean_probability": 0.7569674289858814,
+            "observed_frequency": 0.696969696969697,
+            "rows": 132
+          },
+          {
+            "bin": "0.8-0.9",
+            "mean_probability": 0.8501902848260573,
+            "observed_frequency": 0.8248175182481752,
+            "rows": 137
+          },
+          {
+            "bin": "0.9-1.0",
+            "mean_probability": 0.945035246792331,
+            "observed_frequency": 0.8529411764705882,
+            "rows": 34
+          }
+        ]
+      },
+      "future_low_given_current_not_low": {
+        "base_rate": 0.01913189046992706,
+        "climatology_warning": {
+          "average_precision": 0.015275536486615707,
+          "brier": 0.02015038097420637,
+          "brier_skill_vs_climatology": {
+            "interval_95": [
+              0.0,
+              0.0
+            ],
+            "sessions": 14,
+            "value": 0.0
+          },
+          "brier_skill_vs_naive": {
+            "interval_95": [
+              -0.2934531414503311,
+              0.007049693140653045
+            ],
+            "sessions": 14,
+            "value": -0.06989469913971225
+          },
+          "paired_session_ap_difference_vs_continuous_persistence": {
+            "excluded_all_positive_sessions": [],
+            "excluded_no_positive_sessions": [
+              "ses_eb4868190ab5",
+              "ses_fce1957b3da7"
+            ],
+            "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+            "interval_95": [
+              -0.25886895605714133,
+              -0.10470246201851066
+            ],
+            "sessions": 12,
+            "value": -0.17914260685877834
+          },
+          "precision_at_half": null,
+          "recall_at_half": 0.0,
+          "reliability": [
+            {
+              "bin": "0.0-0.1",
+              "mean_probability": 0.05522802746524636,
+              "observed_frequency": 0.01913189046992706,
+              "rows": 8363
+            },
+            {
+              "bin": "0.1-0.2",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.2-0.3",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.3-0.4",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.4-0.5",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.5-0.6",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.6-0.7",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.7-0.8",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.8-0.9",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.9-1.0",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            }
+          ]
+        },
+        "combined_warning": {
+          "average_precision": 0.21272976567920773,
+          "brier": 0.01876830837436048,
+          "brier_skill_vs_climatology": {
+            "interval_95": [
+              -0.03552636269310764,
+              0.267856804081222
+            ],
+            "sessions": 14,
+            "value": 0.06858791412504905
+          },
+          "brier_skill_vs_naive": {
+            "interval_95": [
+              -0.0931719559531796,
+              0.08229310919892192
+            ],
+            "sessions": 14,
+            "value": 0.0034871466077275315
+          },
+          "paired_session_ap_difference_vs_continuous_persistence": {
+            "excluded_all_positive_sessions": [],
+            "excluded_no_positive_sessions": [
+              "ses_eb4868190ab5",
+              "ses_fce1957b3da7"
+            ],
+            "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+            "interval_95": [
+              -0.0021604787222542256,
+              0.19507748021472116
+            ],
+            "sessions": 12,
+            "value": 0.08327493182300676
+          },
+          "precision_at_half": 0.2558139534883721,
+          "recall_at_half": 0.1375,
+          "reliability": [
+            {
+              "bin": "0.0-0.1",
+              "mean_probability": 0.010578329193683244,
+              "observed_frequency": 0.004224980195405334,
+              "rows": 7574
+            },
+            {
+              "bin": "0.1-0.2",
+              "mean_probability": 0.14355286844076656,
+              "observed_frequency": 0.1253731343283582,
+              "rows": 335
+            },
+            {
+              "bin": "0.2-0.3",
+              "mean_probability": 0.24791271761143618,
+              "observed_frequency": 0.1443850267379679,
+              "rows": 187
+            },
+            {
+              "bin": "0.3-0.4",
+              "mean_probability": 0.345002454003021,
+              "observed_frequency": 0.15126050420168066,
+              "rows": 119
+            },
+            {
+              "bin": "0.4-0.5",
+              "mean_probability": 0.4431736393097877,
+              "observed_frequency": 0.3064516129032258,
+              "rows": 62
+            },
+            {
+              "bin": "0.5-0.6",
+              "mean_probability": 0.5582110109032526,
+              "observed_frequency": 0.28205128205128205,
+              "rows": 39
+            },
+            {
+              "bin": "0.6-0.7",
+              "mean_probability": 0.6460348328432071,
+              "observed_frequency": 0.13793103448275862,
+              "rows": 29
+            },
+            {
+              "bin": "0.7-0.8",
+              "mean_probability": 0.7380055445826368,
+              "observed_frequency": 0.3125,
+              "rows": 16
+            },
+            {
+              "bin": "0.8-0.9",
+              "mean_probability": 0.836362578358919,
+              "observed_frequency": 1.0,
+              "rows": 2
+            },
+            {
+              "bin": "0.9-1.0",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            }
+          ]
+        },
+        "combined_warning_raw": {
+          "average_precision": 0.213244570456518,
+          "brier": 0.01745550891392364,
+          "brier_skill_vs_climatology": {
+            "interval_95": [
+              0.04806565395899262,
+              0.3149667623888406
+            ],
+            "sessions": 14,
+            "value": 0.1337380203248919
+          },
+          "brier_skill_vs_naive": {
+            "interval_95": [
+              0.027686363292714896,
+              0.14027796264235307
+            ],
+            "sessions": 14,
+            "value": 0.07319089987932881
+          },
+          "paired_session_ap_difference_vs_continuous_persistence": {
+            "excluded_all_positive_sessions": [],
+            "excluded_no_positive_sessions": [
+              "ses_eb4868190ab5",
+              "ses_fce1957b3da7"
+            ],
+            "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+            "interval_95": [
+              -0.0021604787222542256,
+              0.19507748021472116
+            ],
+            "sessions": 12,
+            "value": 0.08327493182300676
+          },
+          "precision_at_half": 0.26,
+          "recall_at_half": 0.08125,
+          "reliability": [
+            {
+              "bin": "0.0-0.1",
+              "mean_probability": 0.005839650149779142,
+              "observed_frequency": 0.009863429438543247,
+              "rows": 7908
+            },
+            {
+              "bin": "0.1-0.2",
+              "mean_probability": 0.14246451096013457,
+              "observed_frequency": 0.14414414414414414,
+              "rows": 222
+            },
+            {
+              "bin": "0.2-0.3",
+              "mean_probability": 0.24533926259931718,
+              "observed_frequency": 0.12745098039215685,
+              "rows": 102
+            },
+            {
+              "bin": "0.3-0.4",
+              "mean_probability": 0.3427834796983295,
+              "observed_frequency": 0.30434782608695654,
+              "rows": 46
+            },
+            {
+              "bin": "0.4-0.5",
+              "mean_probability": 0.4481057692016858,
+              "observed_frequency": 0.2857142857142857,
+              "rows": 35
+            },
+            {
+              "bin": "0.5-0.6",
+              "mean_probability": 0.5374005474402386,
+              "observed_frequency": 0.16,
+              "rows": 25
+            },
+            {
+              "bin": "0.6-0.7",
+              "mean_probability": 0.6431722193195759,
+              "observed_frequency": 0.3333333333333333,
+              "rows": 18
+            },
+            {
+              "bin": "0.7-0.8",
+              "mean_probability": 0.7281282607000784,
+              "observed_frequency": 0.2,
+              "rows": 5
+            },
+            {
+              "bin": "0.8-0.9",
+              "mean_probability": 0.8317744780942556,
+              "observed_frequency": 1.0,
+              "rows": 2
+            },
+            {
+              "bin": "0.9-1.0",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            }
+          ]
+        },
+        "history_only_warning": {
+          "average_precision": 0.19686083986671898,
+          "brier": 0.01797661186744647,
+          "brier_skill_vs_climatology": {
+            "interval_95": [
+              0.010286445125502983,
+              0.3105641136194329
+            ],
+            "sessions": 14,
+            "value": 0.10787732051033916
+          },
+          "brier_skill_vs_naive": {
+            "interval_95": [
+              -0.01259135252365282,
+              0.14131688054061312
+            ],
+            "sessions": 14,
+            "value": 0.045522674231695426
+          },
+          "paired_session_ap_difference_vs_continuous_persistence": {
+            "excluded_all_positive_sessions": [],
+            "excluded_no_positive_sessions": [
+              "ses_eb4868190ab5",
+              "ses_fce1957b3da7"
+            ],
+            "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+            "interval_95": [
+              -0.026324031594836705,
+              0.1046559135914573
+            ],
+            "sessions": 12,
+            "value": 0.029834416460885357
+          },
+          "precision_at_half": 0.2545454545454545,
+          "recall_at_half": 0.0875,
+          "reliability": [
+            {
+              "bin": "0.0-0.1",
+              "mean_probability": 0.01040834191336642,
+              "observed_frequency": 0.0062402496099844,
+              "rows": 7692
+            },
+            {
+              "bin": "0.1-0.2",
+              "mean_probability": 0.1446741398404794,
+              "observed_frequency": 0.13870967741935483,
+              "rows": 310
+            },
+            {
+              "bin": "0.2-0.3",
+              "mean_probability": 0.24427959670614224,
+              "observed_frequency": 0.16463414634146342,
+              "rows": 164
+            },
+            {
+              "bin": "0.3-0.4",
+              "mean_probability": 0.34500877198563507,
+              "observed_frequency": 0.16326530612244897,
+              "rows": 98
+            },
+            {
+              "bin": "0.4-0.5",
+              "mean_probability": 0.45034688728456945,
+              "observed_frequency": 0.2727272727272727,
+              "rows": 44
+            },
+            {
+              "bin": "0.5-0.6",
+              "mean_probability": 0.5486696502360046,
+              "observed_frequency": 0.22857142857142856,
+              "rows": 35
+            },
+            {
+              "bin": "0.6-0.7",
+              "mean_probability": 0.6428907499190293,
+              "observed_frequency": 0.23076923076923078,
+              "rows": 13
+            },
+            {
+              "bin": "0.7-0.8",
+              "mean_probability": 0.7278546187330202,
+              "observed_frequency": 0.3333333333333333,
+              "rows": 6
+            },
+            {
+              "bin": "0.8-0.9",
+              "mean_probability": 0.8455157874273861,
+              "observed_frequency": 1.0,
+              "rows": 1
+            },
+            {
+              "bin": "0.9-1.0",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            }
+          ]
+        },
+        "history_only_warning_raw": {
+          "average_precision": 0.19395840485489754,
+          "brier": 0.018073165104384514,
+          "brier_skill_vs_climatology": {
+            "interval_95": [
+              0.005969972437476777,
+              0.3055156644466042
+            ],
+            "sessions": 14,
+            "value": 0.10308568718779099
+          },
+          "brier_skill_vs_naive": {
+            "interval_95": [
+              -0.02537463559291023,
+              0.1338724520403676
+            ],
+            "sessions": 14,
+            "value": 0.04039613113967999
+          },
+          "paired_session_ap_difference_vs_continuous_persistence": {
+            "excluded_all_positive_sessions": [],
+            "excluded_no_positive_sessions": [
+              "ses_eb4868190ab5",
+              "ses_fce1957b3da7"
+            ],
+            "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+            "interval_95": [
+              -0.026324031594836705,
+              0.1046559135914573
+            ],
+            "sessions": 12,
+            "value": 0.029834416460885357
+          },
+          "precision_at_half": 0.23636363636363636,
+          "recall_at_half": 0.08125,
+          "reliability": [
+            {
+              "bin": "0.0-0.1",
+              "mean_probability": 0.004817707111376991,
+              "observed_frequency": 0.009228824273072062,
+              "rows": 7910
+            },
+            {
+              "bin": "0.1-0.2",
+              "mean_probability": 0.14519544968977788,
+              "observed_frequency": 0.1642512077294686,
+              "rows": 207
+            },
+            {
+              "bin": "0.2-0.3",
+              "mean_probability": 0.24807547164249183,
+              "observed_frequency": 0.1717171717171717,
+              "rows": 99
+            },
+            {
+              "bin": "0.3-0.4",
+              "mean_probability": 0.34884846109450723,
+              "observed_frequency": 0.24528301886792453,
+              "rows": 53
+            },
+            {
+              "bin": "0.4-0.5",
+              "mean_probability": 0.44347843003243553,
+              "observed_frequency": 0.2564102564102564,
+              "rows": 39
+            },
+            {
+              "bin": "0.5-0.6",
+              "mean_probability": 0.5388979210875998,
+              "observed_frequency": 0.23076923076923078,
+              "rows": 26
+            },
+            {
+              "bin": "0.6-0.7",
+              "mean_probability": 0.6497337162790733,
+              "observed_frequency": 0.125,
+              "rows": 16
+            },
+            {
+              "bin": "0.7-0.8",
+              "mean_probability": 0.7607008076017697,
+              "observed_frequency": 0.2857142857142857,
+              "rows": 7
+            },
+            {
+              "bin": "0.8-0.9",
+              "mean_probability": 0.8478373541194217,
+              "observed_frequency": 0.4,
+              "rows": 5
+            },
+            {
+              "bin": "0.9-1.0",
+              "mean_probability": 0.928251033763839,
+              "observed_frequency": 1.0,
+              "rows": 1
+            }
+          ]
+        },
+        "naive_warning": {
+          "average_precision": 0.015234429923784211,
+          "brier": 0.018833985242107477,
+          "brier_skill_vs_climatology": {
+            "interval_95": [
+              -0.007099746035134469,
+              0.22687572140285334
+            ],
+            "sessions": 14,
+            "value": 0.06532857784594459
+          },
+          "brier_skill_vs_naive": {
+            "interval_95": [
+              0.0,
+              0.0
+            ],
+            "sessions": 14,
+            "value": 0.0
+          },
+          "paired_session_ap_difference_vs_continuous_persistence": {
+            "excluded_all_positive_sessions": [],
+            "excluded_no_positive_sessions": [
+              "ses_eb4868190ab5",
+              "ses_fce1957b3da7"
+            ],
+            "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+            "interval_95": [
+              -0.25886895605714133,
+              -0.10470246201851066
+            ],
+            "sessions": 12,
+            "value": -0.17914260685877834
+          },
+          "precision_at_half": null,
+          "recall_at_half": 0.0,
+          "reliability": [
+            {
+              "bin": "0.0-0.1",
+              "mean_probability": 0.013444260411916277,
+              "observed_frequency": 0.01913189046992706,
+              "rows": 8363
+            },
+            {
+              "bin": "0.1-0.2",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.2-0.3",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.3-0.4",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.4-0.5",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.5-0.6",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.6-0.7",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.7-0.8",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.8-0.9",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            },
+            {
+              "bin": "0.9-1.0",
+              "mean_probability": null,
+              "observed_frequency": null,
+              "rows": 0
+            }
+          ]
+        },
+        "persistence_warning_score": {
+          "average_precision": 0.16981888922550728,
+          "paired_session_ap_difference_vs_continuous_persistence": {
+            "excluded_all_positive_sessions": [],
+            "excluded_no_positive_sessions": [
+              "ses_eb4868190ab5",
+              "ses_fce1957b3da7"
+            ],
+            "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+            "interval_95": [
+              0.0,
+              0.0
+            ],
+            "sessions": 12,
+            "value": 0.0
+          },
+          "score_semantics": "negative past rate; ranking score, not probability"
+        },
+        "positive_rows": 160,
+        "rows": 8363,
+        "sessions": 14,
+        "target": "next 5 s mean delivered rate below threshold; not a stall or threshold crossing",
+        "trailing_mean_warning_score": {
+          "average_precision": 0.15199586985178348,
+          "paired_session_ap_difference_vs_continuous_persistence": {
+            "excluded_all_positive_sessions": [],
+            "excluded_no_positive_sessions": [
+              "ses_eb4868190ab5",
+              "ses_fce1957b3da7"
+            ],
+            "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+            "interval_95": [
+              -0.09831685056112334,
+              0.045462458071877224
+            ],
+            "sessions": 12,
+            "value": -0.028373196020549152
+          },
+          "score_semantics": "negative past rate; ranking score, not probability"
+        }
+      },
+      "history_only_warning": {
+        "average_precision": 0.5971398910806717,
+        "brier": 0.03381053356514786,
+        "brier_skill_vs_climatology": {
+          "interval_95": [
+            0.19228373442853178,
+            0.5797841879116107
+          ],
+          "sessions": 14,
+          "value": 0.4046006176766924
+        },
+        "brier_skill_vs_naive": {
+          "interval_95": [
+            0.1135930558130369,
+            0.4655712993182308
+          ],
+          "sessions": 14,
+          "value": 0.28313593242456714
+        },
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            0.1831868874258265,
+            0.4376337759648382
+          ],
+          "sessions": 12,
+          "value": 0.30560700375525846
+        },
+        "precision_at_half": 0.6359918200408998,
+        "recall_at_half": 0.5271186440677966,
+        "reliability": [
+          {
+            "bin": "0.0-0.1",
+            "mean_probability": 0.011609180665633427,
+            "observed_frequency": 0.006972830007213273,
+            "rows": 8318
+          },
+          {
+            "bin": "0.1-0.2",
+            "mean_probability": 0.14689806898178084,
+            "observed_frequency": 0.15270935960591134,
+            "rows": 406
+          },
+          {
+            "bin": "0.2-0.3",
+            "mean_probability": 0.24533259517054373,
+            "observed_frequency": 0.1821705426356589,
+            "rows": 258
+          },
+          {
+            "bin": "0.3-0.4",
+            "mean_probability": 0.34807586515774475,
+            "observed_frequency": 0.29533678756476683,
+            "rows": 193
+          },
+          {
+            "bin": "0.4-0.5",
+            "mean_probability": 0.4498326121737735,
+            "observed_frequency": 0.4074074074074074,
+            "rows": 135
+          },
+          {
+            "bin": "0.5-0.6",
+            "mean_probability": 0.5478628043135081,
+            "observed_frequency": 0.4915254237288136,
+            "rows": 118
+          },
+          {
+            "bin": "0.6-0.7",
+            "mean_probability": 0.6483130057960598,
+            "observed_frequency": 0.6165413533834586,
+            "rows": 133
+          },
+          {
+            "bin": "0.7-0.8",
+            "mean_probability": 0.7517358268087269,
+            "observed_frequency": 0.65,
+            "rows": 120
+          },
+          {
+            "bin": "0.8-0.9",
+            "mean_probability": 0.8367180152214435,
+            "observed_frequency": 0.8255813953488372,
+            "rows": 86
+          },
+          {
+            "bin": "0.9-1.0",
+            "mean_probability": 0.9323933045443555,
+            "observed_frequency": 0.6875,
+            "rows": 32
+          }
+        ]
+      },
+      "history_only_warning_raw": {
+        "average_precision": 0.6103398104446958,
+        "brier": 0.03404351284759459,
+        "brier_skill_vs_climatology": {
+          "interval_95": [
+            0.18881480804765396,
+            0.5842927655988169
+          ],
+          "sessions": 14,
+          "value": 0.4004978808596108
+        },
+        "brier_skill_vs_naive": {
+          "interval_95": [
+            0.10536439058960242,
+            0.47612852879671735
+          ],
+          "sessions": 14,
+          "value": 0.2781962151688855
+        },
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            0.1831868874258265,
+            0.4376337759648382
+          ],
+          "sessions": 12,
+          "value": 0.30560700375525846
+        },
+        "precision_at_half": 0.6317829457364341,
+        "recall_at_half": 0.5525423728813559,
+        "reliability": [
+          {
+            "bin": "0.0-0.1",
+            "mean_probability": 0.005581588356575096,
+            "observed_frequency": 0.010706388921214942,
+            "rows": 8593
+          },
+          {
+            "bin": "0.1-0.2",
+            "mean_probability": 0.14589674625972754,
+            "observed_frequency": 0.17725752508361203,
+            "rows": 299
+          },
+          {
+            "bin": "0.2-0.3",
+            "mean_probability": 0.24990735809124587,
+            "observed_frequency": 0.22941176470588234,
+            "rows": 170
+          },
+          {
+            "bin": "0.3-0.4",
+            "mean_probability": 0.348902453598936,
+            "observed_frequency": 0.30327868852459017,
+            "rows": 122
+          },
+          {
+            "bin": "0.4-0.5",
+            "mean_probability": 0.4502876232919346,
+            "observed_frequency": 0.43434343434343436,
+            "rows": 99
+          },
+          {
+            "bin": "0.5-0.6",
+            "mean_probability": 0.5450171880600988,
+            "observed_frequency": 0.45263157894736844,
+            "rows": 95
+          },
+          {
+            "bin": "0.6-0.7",
+            "mean_probability": 0.6564090933908383,
+            "observed_frequency": 0.5064935064935064,
+            "rows": 77
+          },
+          {
+            "bin": "0.7-0.8",
+            "mean_probability": 0.7468258958059185,
+            "observed_frequency": 0.6517857142857143,
+            "rows": 112
+          },
+          {
+            "bin": "0.8-0.9",
+            "mean_probability": 0.8579756150789087,
+            "observed_frequency": 0.6942148760330579,
+            "rows": 121
+          },
+          {
+            "bin": "0.9-1.0",
+            "mean_probability": 0.9437675565919044,
+            "observed_frequency": 0.7837837837837838,
+            "rows": 111
+          }
+        ]
+      },
+      "naive_warning": {
+        "average_precision": 0.22209830460742297,
+        "brier": 0.04716449755879291,
+        "brier_skill_vs_climatology": {
+          "interval_95": [
+            0.07008580434949871,
+            0.23905294031513769
+          ],
+          "sessions": 14,
+          "value": 0.16943893653777542
+        },
+        "brier_skill_vs_naive": {
+          "interval_95": [
+            0.0,
+            0.0
+          ],
+          "sessions": 14,
+          "value": 0.0
+        },
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            -0.0679532446530336,
+            0.00803428925891115
+          ],
+          "sessions": 12,
+          "value": -0.030201192295410486
+        },
+        "precision_at_half": null,
+        "recall_at_half": 0.0,
+        "reliability": [
+          {
+            "bin": "0.0-0.1",
+            "mean_probability": 0.013444260411916277,
+            "observed_frequency": 0.01913189046992706,
+            "rows": 8363
+          },
+          {
+            "bin": "0.1-0.2",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.2-0.3",
+            "mean_probability": 0.28003799479878955,
+            "observed_frequency": 0.31366691560866317,
+            "rows": 1339
+          },
+          {
+            "bin": "0.3-0.4",
+            "mean_probability": 0.30465587044534415,
+            "observed_frequency": 0.10309278350515463,
+            "rows": 97
+          },
+          {
+            "bin": "0.4-0.5",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.5-0.6",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.6-0.7",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.7-0.8",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.8-0.9",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.9-1.0",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          }
+        ]
+      },
+      "persistence_warning_score": {
+        "average_precision": 0.24394298262298755,
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            0.0,
+            0.0
+          ],
+          "sessions": 12,
+          "value": 0.0
+        },
+        "score_semantics": "negative past rate; ranking score, not probability"
+      },
+      "positive_rows": 590,
+      "rows": 9799,
+      "sessions": 14,
+      "target": "next 5 s mean delivered rate below threshold; not a stall or threshold crossing",
+      "trailing_mean_warning_score": {
+        "average_precision": 0.46358857413535465,
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            0.04148079301963124,
+            0.21669378924111013
+          ],
+          "sessions": 12,
+          "value": 0.12922974052557334
+        },
+        "score_semantics": "negative past rate; ranking score, not probability"
+      }
+    },
+    "warning_calibration_status_rows": {
+      "combined": {
+        "sigmoid_inner_session_folds": 9799
+      },
+      "history_only": {
+        "sigmoid_inner_session_folds": 9799
+      }
+    }
+  },
+  "lock_identity_status": "available",
+  "lock_sha256": "fd7ae47a6dcaf7fcff483798a15f575dcc35f5c66bd2c5feb4af33cf0468d35c",
+  "method": "nested_session_cross_validation_v3",
+  "plan": "docs/TECHNICAL_REPORT.md",
+  "point": {
+    "combined_mean": {
+      "mae_mbps": 19.936469704553613,
+      "session_mae_median_mbps": 17.834864586729285,
+      "sessions_better_than_persistence": 16,
+      "skill_vs_persistence": {
+        "interval_95": [
+          0.17604170118791876,
+          0.3195671642039287
+        ],
+        "sessions": 21,
+        "value": 0.26347091436633185
+      }
+    },
+    "history_only_mean": {
+      "mae_mbps": 19.510448989915464,
+      "session_mae_median_mbps": 16.80900278086636,
+      "sessions_better_than_persistence": 14,
+      "skill_vs_persistence": {
+        "interval_95": [
+          0.19729985287925317,
+          0.3319020503415068
+        ],
+        "sessions": 21,
+        "value": 0.27920974135342747
+      }
+    },
+    "persistence": {
+      "mae_mbps": 27.06813633490306,
+      "session_mae_median_mbps": 19.463952106567536,
+      "sessions_better_than_persistence": 0,
+      "skill_vs_persistence": {
+        "interval_95": [
+          0.0,
+          0.0
+        ],
+        "sessions": 21,
+        "value": 0.0
+      }
+    },
+    "trailing_mean": {
+      "mae_mbps": 26.96237775545899,
+      "session_mae_median_mbps": 21.796561727162427,
+      "sessions_better_than_persistence": 12,
+      "skill_vs_persistence": {
+        "interval_95": [
+          -0.07822325391899017,
+          0.07272871868602342
+        ],
+        "sessions": 21,
+        "value": 0.00390712452957831
+      }
+    }
+  },
+  "quantile": {
+    "combined": {
+      "false_warning_by_cautious_forecast": {
+        "interval_95": [
+          0.028813389018211552,
+          0.08037659057891307
+        ],
+        "sessions": 21,
+        "value": 0.05086008397670324
+      },
+      "interval_coverage": {
+        "interval_95": [
+          0.739496581618142,
+          0.7656929649862251
+        ],
+        "sessions": 21,
+        "value": 0.7521954944635357
+      },
+      "interval_mean_width_mbps": 57.24003794539111,
+      "low_rows": 948,
+      "missed_by_cautious_forecast": {
+        "interval_95": [
+          0.11757606469961354,
+          0.3057886794241739
+        ],
+        "sessions": 21,
+        "value": 0.1930379746835443
+      },
+      "missed_low_rows": 183,
+      "nominal_coverage": 0.8,
+      "pinball_mean": {
+        "0.1": 6.907921247995172,
+        "0.5": 18.4654733666567,
+        "0.9": 11.20845460368576
+      },
+      "quantile_score_skill_vs_naive": {
+        "interval_95": [
+          0.403951727245087,
+          0.4689342381083524
+        ],
+        "sessions": 21,
+        "value": 0.4375256009843139
+      },
+      "winkler_mean": 90.58187925840465
+    },
+    "history_only": {
+      "false_warning_by_cautious_forecast": {
+        "interval_95": [
+          0.031495622442993185,
+          0.09989785778387517
+        ],
+        "sessions": 21,
+        "value": 0.060205878369226605
+      },
+      "interval_coverage": {
+        "interval_95": [
+          0.7389218783924997,
+          0.773862875284179
+        ],
+        "sessions": 21,
+        "value": 0.7555046455390098
+      },
+      "interval_mean_width_mbps": 54.59841600465221,
+      "low_rows": 948,
+      "missed_by_cautious_forecast": {
+        "interval_95": [
+          0.12590297208656814,
+          0.2609622971861894
+        ],
+        "sessions": 21,
+        "value": 0.18248945147679324
+      },
+      "missed_low_rows": 173,
+      "nominal_coverage": 0.8,
+      "pinball_mean": {
+        "0.1": 6.61521291556179,
+        "0.5": 18.308454306038623,
+        "0.9": 11.19730322244967
+      },
+      "quantile_score_skill_vs_naive": {
+        "interval_95": [
+          0.40504572218507,
+          0.47687731344141965
+        ],
+        "sessions": 21,
+        "value": 0.44461197078588544
+      },
+      "winkler_mean": 89.06258069005729
+    },
+    "naive": {
+      "false_warning_by_cautious_forecast": {
+        "interval_95": [
+          0.6169924155709868,
+          0.8190578065902052
+        ],
+        "sessions": 21,
+        "value": 0.7150887173235811
+      },
+      "interval_coverage": {
+        "interval_95": [
+          0.7252229293759492,
+          0.863402900414799
+        ],
+        "sessions": 21,
+        "value": 0.7918416698485427
+      },
+      "interval_mean_width_mbps": 59.942731159051405,
+      "low_rows": 948,
+      "missed_by_cautious_forecast": {
+        "interval_95": [
+          0.0,
+          0.007794641256179705
+        ],
+        "sessions": 21,
+        "value": 0.0031645569620253164
+      },
+      "missed_low_rows": 3,
+      "nominal_coverage": 0.8,
+      "pinball_mean": {
+        "0.1": 15.274576540240126,
+        "0.5": 27.067940254974335,
+        "0.9": 22.6948418514276
+      },
+      "quantile_score_skill_vs_naive": {
+        "interval_95": [
+          0.0,
+          0.0
+        ],
+        "sessions": 21,
+        "value": 0.0
+      },
+      "winkler_mean": 189.84709195833867
+    }
+  },
+  "quantiles": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "rows": 15714,
+  "sessions": 21,
+  "snapshot_id": "snap_dd48e8cf739fd2be",
+  "snapshot_manifest_sha256": "4f1245e51f05fe94f03a5791bd596076a12dc241e913158e1907d048bed84216",
+  "source_sha256": "05e8f96a4a158e023590cec991627b33aa4faba7152702abb68e798bcebbb6cd",
+  "warning": {
+    "base_rate": 0.060328369606720125,
+    "climatology_warning": {
+      "average_precision": 0.040418648045801135,
+      "brier": 0.05693796787372028,
+      "brier_skill_vs_climatology": {
+        "interval_95": [
+          0.0,
+          0.0
+        ],
+        "sessions": 21,
+        "value": 0.0
+      },
+      "brier_skill_vs_naive": {
+        "interval_95": [
+          -0.31669999428285517,
+          -0.11330950872202615
+        ],
+        "sessions": 21,
+        "value": -0.22176501286633554
+      },
+      "paired_session_ap_difference_vs_continuous_persistence": {
+        "excluded_all_positive_sessions": [],
+        "excluded_no_positive_sessions": [
+          "ses_eb4868190ab5",
+          "ses_fce1957b3da7"
+        ],
+        "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+        "interval_95": [
+          -0.24254734342347364,
+          -0.15344465764967427
+        ],
+        "sessions": 19,
+        "value": -0.19976538735306595
+      },
+      "precision_at_half": null,
+      "recall_at_half": 0.0,
+      "reliability": [
+        {
+          "bin": "0.0-0.1",
+          "mean_probability": 0.06093074484178043,
+          "observed_frequency": 0.060328369606720125,
+          "rows": 15714
+        },
+        {
+          "bin": "0.1-0.2",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        },
+        {
+          "bin": "0.2-0.3",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        },
+        {
+          "bin": "0.3-0.4",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        },
+        {
+          "bin": "0.4-0.5",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        },
+        {
+          "bin": "0.5-0.6",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        },
+        {
+          "bin": "0.6-0.7",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        },
+        {
+          "bin": "0.7-0.8",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        },
+        {
+          "bin": "0.8-0.9",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        },
+        {
+          "bin": "0.9-1.0",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        }
+      ]
+    },
+    "combined_warning": {
+      "average_precision": 0.6867324224257056,
+      "brier": 0.028842306339072886,
+      "brier_skill_vs_climatology": {
+        "interval_95": [
+          0.36651218478815023,
+          0.5966723295050512
+        ],
+        "sessions": 21,
+        "value": 0.4934433486800808
+      },
+      "brier_skill_vs_naive": {
+        "interval_95": [
+          0.28095729084368465,
+          0.48371456484614556
+        ],
+        "sessions": 21,
+        "value": 0.3811068063825911
+      },
+      "paired_session_ap_difference_vs_continuous_persistence": {
+        "excluded_all_positive_sessions": [],
+        "excluded_no_positive_sessions": [
+          "ses_eb4868190ab5",
+          "ses_fce1957b3da7"
+        ],
+        "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+        "interval_95": [
+          0.25836336227640816,
+          0.42266579530515397
+        ],
+        "sessions": 19,
+        "value": 0.33717091584229375
+      },
+      "precision_at_half": 0.7177615571776156,
+      "recall_at_half": 0.6223628691983122,
+      "reliability": [
+        {
+          "bin": "0.0-0.1",
+          "mean_probability": 0.011132048751683343,
+          "observed_frequency": 0.009016214644077656,
+          "rows": 13753
+        },
+        {
+          "bin": "0.1-0.2",
+          "mean_probability": 0.14350360562664888,
+          "observed_frequency": 0.14363636363636365,
+          "rows": 550
+        },
+        {
+          "bin": "0.2-0.3",
+          "mean_probability": 0.24376303411311795,
+          "observed_frequency": 0.21875,
+          "rows": 288
+        },
+        {
+          "bin": "0.3-0.4",
+          "mean_probability": 0.34671158524259427,
+          "observed_frequency": 0.2275449101796407,
+          "rows": 167
+        },
+        {
+          "bin": "0.4-0.5",
+          "mean_probability": 0.4516956525654384,
+          "observed_frequency": 0.40298507462686567,
+          "rows": 134
+        },
+        {
+          "bin": "0.5-0.6",
+          "mean_probability": 0.5557594176500701,
+          "observed_frequency": 0.46405228758169936,
+          "rows": 153
+        },
+        {
+          "bin": "0.6-0.7",
+          "mean_probability": 0.6541262957255991,
+          "observed_frequency": 0.6739130434782609,
+          "rows": 184
+        },
+        {
+          "bin": "0.7-0.8",
+          "mean_probability": 0.7532115595072227,
+          "observed_frequency": 0.8024193548387096,
+          "rows": 248
+        },
+        {
+          "bin": "0.8-0.9",
+          "mean_probability": 0.8463945422225598,
+          "observed_frequency": 0.8177570093457944,
+          "rows": 214
+        },
+        {
+          "bin": "0.9-1.0",
+          "mean_probability": 0.9206269705994913,
+          "observed_frequency": 0.9130434782608695,
+          "rows": 23
+        }
+      ]
+    },
+    "combined_warning_raw": {
+      "average_precision": 0.6903206493429596,
+      "brier": 0.028894067858768368,
+      "brier_skill_vs_climatology": {
+        "interval_95": [
+          0.36455678551268167,
+          0.5990668251694413
+        ],
+        "sessions": 21,
+        "value": 0.49253426250035826
+      },
+      "brier_skill_vs_naive": {
+        "interval_95": [
+          0.276996202321415,
+          0.48571522219252533
+        ],
+        "sessions": 21,
+        "value": 0.3799961166945258
+      },
+      "paired_session_ap_difference_vs_continuous_persistence": {
+        "excluded_all_positive_sessions": [],
+        "excluded_no_positive_sessions": [
+          "ses_eb4868190ab5",
+          "ses_fce1957b3da7"
+        ],
+        "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+        "interval_95": [
+          0.25836336227640816,
+          0.42266579530515397
+        ],
+        "sessions": 19,
+        "value": 0.33717091584229375
+      },
+      "precision_at_half": 0.7360931435963778,
+      "recall_at_half": 0.6002109704641351,
+      "reliability": [
+        {
+          "bin": "0.0-0.1",
+          "mean_probability": 0.0055366138568593605,
+          "observed_frequency": 0.01343556555993247,
+          "rows": 14216
+        },
+        {
+          "bin": "0.1-0.2",
+          "mean_probability": 0.1419005250611255,
+          "observed_frequency": 0.18950437317784258,
+          "rows": 343
+        },
+        {
+          "bin": "0.2-0.3",
+          "mean_probability": 0.24243401445749443,
+          "observed_frequency": 0.2147239263803681,
+          "rows": 163
+        },
+        {
+          "bin": "0.3-0.4",
+          "mean_probability": 0.3487990985086478,
+          "observed_frequency": 0.3739130434782609,
+          "rows": 115
+        },
+        {
+          "bin": "0.4-0.5",
+          "mean_probability": 0.4516279890395384,
+          "observed_frequency": 0.4326923076923077,
+          "rows": 104
+        },
+        {
+          "bin": "0.5-0.6",
+          "mean_probability": 0.5517952185362012,
+          "observed_frequency": 0.5,
+          "rows": 128
+        },
+        {
+          "bin": "0.6-0.7",
+          "mean_probability": 0.6532096712187314,
+          "observed_frequency": 0.6384615384615384,
+          "rows": 130
+        },
+        {
+          "bin": "0.7-0.8",
+          "mean_probability": 0.7498977663169638,
+          "observed_frequency": 0.8085106382978723,
+          "rows": 188
+        },
+        {
+          "bin": "0.8-0.9",
+          "mean_probability": 0.8482149324120221,
+          "observed_frequency": 0.8181818181818182,
+          "rows": 231
+        },
+        {
+          "bin": "0.9-1.0",
+          "mean_probability": 0.9304167091866599,
+          "observed_frequency": 0.84375,
+          "rows": 96
+        }
+      ]
+    },
+    "future_low_given_current_not_low": {
+      "base_rate": 0.0163280662151994,
+      "climatology_warning": {
+        "average_precision": 0.011017064767479982,
+        "brier": 0.018143843087825934,
+        "brier_skill_vs_climatology": {
+          "interval_95": [
+            0.0,
+            0.0
+          ],
+          "sessions": 21,
+          "value": 0.0
+        },
+        "brier_skill_vs_naive": {
+          "interval_95": [
+            -0.3186454152125402,
+            -0.03899091898151835
+          ],
+          "sessions": 21,
+          "value": -0.12616951575583069
+        },
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            -0.22128648669516643,
+            -0.1045634488765567
+          ],
+          "sessions": 19,
+          "value": -0.15981379288694247
+        },
+        "precision_at_half": null,
+        "recall_at_half": 0.0,
+        "reliability": [
+          {
+            "bin": "0.0-0.1",
+            "mean_probability": 0.06108450272135957,
+            "observed_frequency": 0.0163280662151994,
+            "rows": 13290
+          },
+          {
+            "bin": "0.1-0.2",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.2-0.3",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.3-0.4",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.4-0.5",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.5-0.6",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.6-0.7",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.7-0.8",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.8-0.9",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.9-1.0",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          }
+        ]
+      },
+      "combined_warning": {
+        "average_precision": 0.2344211485126671,
+        "brier": 0.014437381394834395,
+        "brier_skill_vs_climatology": {
+          "interval_95": [
+            0.13416968811611102,
+            0.32349014939987286
+          ],
+          "sessions": 21,
+          "value": 0.20428206279398875
+        },
+        "brier_skill_vs_naive": {
+          "interval_95": [
+            0.05203706271196237,
+            0.14563519019521154
+          ],
+          "sessions": 21,
+          "value": 0.10388671597847776
+        },
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            0.031499616059432536,
+            0.11772420679714271
+          ],
+          "sessions": 19,
+          "value": 0.07509619977172342
+        },
+        "precision_at_half": 0.4262295081967213,
+        "recall_at_half": 0.11981566820276497,
+        "reliability": [
+          {
+            "bin": "0.0-0.1",
+            "mean_probability": 0.009906207558151732,
+            "observed_frequency": 0.007486460656259956,
+            "rows": 12556
+          },
+          {
+            "bin": "0.1-0.2",
+            "mean_probability": 0.1424895797776054,
+            "observed_frequency": 0.10427807486631016,
+            "rows": 374
+          },
+          {
+            "bin": "0.2-0.3",
+            "mean_probability": 0.24328706493495025,
+            "observed_frequency": 0.14285714285714285,
+            "rows": 168
+          },
+          {
+            "bin": "0.3-0.4",
+            "mean_probability": 0.3466865337771214,
+            "observed_frequency": 0.20224719101123595,
+            "rows": 89
+          },
+          {
+            "bin": "0.4-0.5",
+            "mean_probability": 0.44968901004443784,
+            "observed_frequency": 0.38095238095238093,
+            "rows": 42
+          },
+          {
+            "bin": "0.5-0.6",
+            "mean_probability": 0.5567855671118118,
+            "observed_frequency": 0.375,
+            "rows": 32
+          },
+          {
+            "bin": "0.6-0.7",
+            "mean_probability": 0.6403621748150944,
+            "observed_frequency": 0.45,
+            "rows": 20
+          },
+          {
+            "bin": "0.7-0.8",
+            "mean_probability": 0.7303283592589561,
+            "observed_frequency": 0.5714285714285714,
+            "rows": 7
+          },
+          {
+            "bin": "0.8-0.9",
+            "mean_probability": 0.8339462160461069,
+            "observed_frequency": 0.5,
+            "rows": 2
+          },
+          {
+            "bin": "0.9-1.0",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          }
+        ]
+      },
+      "combined_warning_raw": {
+        "average_precision": 0.23327624824322915,
+        "brier": 0.014227436902098496,
+        "brier_skill_vs_climatology": {
+          "interval_95": [
+            0.13877769959882097,
+            0.3447993835164803
+          ],
+          "sessions": 21,
+          "value": 0.2158531776740975
+        },
+        "brier_skill_vs_naive": {
+          "interval_95": [
+            0.07642443173452948,
+            0.16236759747435608
+          ],
+          "sessions": 21,
+          "value": 0.11691775281976491
+        },
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            0.031499616059432536,
+            0.11772420679714271
+          ],
+          "sessions": 19,
+          "value": 0.07509619977172342
+        },
+        "precision_at_half": 0.40816326530612246,
+        "recall_at_half": 0.09216589861751152,
+        "reliability": [
+          {
+            "bin": "0.0-0.1",
+            "mean_probability": 0.004607463511193602,
+            "observed_frequency": 0.009937116683487308,
+            "rows": 12881
+          },
+          {
+            "bin": "0.1-0.2",
+            "mean_probability": 0.1414974809481582,
+            "observed_frequency": 0.12871287128712872,
+            "rows": 202
+          },
+          {
+            "bin": "0.2-0.3",
+            "mean_probability": 0.24134695238001905,
+            "observed_frequency": 0.16279069767441862,
+            "rows": 86
+          },
+          {
+            "bin": "0.3-0.4",
+            "mean_probability": 0.3432392929901595,
+            "observed_frequency": 0.4090909090909091,
+            "rows": 44
+          },
+          {
+            "bin": "0.4-0.5",
+            "mean_probability": 0.44274325454353886,
+            "observed_frequency": 0.39285714285714285,
+            "rows": 28
+          },
+          {
+            "bin": "0.5-0.6",
+            "mean_probability": 0.5521153137102865,
+            "observed_frequency": 0.3333333333333333,
+            "rows": 27
+          },
+          {
+            "bin": "0.6-0.7",
+            "mean_probability": 0.6424488365354439,
+            "observed_frequency": 0.36363636363636365,
+            "rows": 11
+          },
+          {
+            "bin": "0.7-0.8",
+            "mean_probability": 0.7398362334089038,
+            "observed_frequency": 0.5714285714285714,
+            "rows": 7
+          },
+          {
+            "bin": "0.8-0.9",
+            "mean_probability": 0.8323616009433432,
+            "observed_frequency": 0.6666666666666666,
+            "rows": 3
+          },
+          {
+            "bin": "0.9-1.0",
+            "mean_probability": 0.9304433911207316,
+            "observed_frequency": 1.0,
+            "rows": 1
+          }
+        ]
+      },
+      "history_only_warning": {
+        "average_precision": 0.2001381631178567,
+        "brier": 0.014651452813178594,
+        "brier_skill_vs_climatology": {
+          "interval_95": [
+            0.11715281930710891,
+            0.31668069378700753
+          ],
+          "sessions": 21,
+          "value": 0.19248349193400183
+        },
+        "brier_skill_vs_naive": {
+          "interval_95": [
+            0.038679831739600025,
+            0.14322031007400085
+          ],
+          "sessions": 21,
+          "value": 0.0905995251464754
+        },
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            0.01767595552618587,
+            0.1188665705588397
+          ],
+          "sessions": 19,
+          "value": 0.06454175235340819
+        },
+        "precision_at_half": 0.48148148148148145,
+        "recall_at_half": 0.059907834101382486,
+        "reliability": [
+          {
+            "bin": "0.0-0.1",
+            "mean_probability": 0.008889189798450482,
+            "observed_frequency": 0.00657789186587518,
+            "rows": 12466
+          },
+          {
+            "bin": "0.1-0.2",
+            "mean_probability": 0.14005235399057328,
+            "observed_frequency": 0.1358313817330211,
+            "rows": 427
+          },
+          {
+            "bin": "0.2-0.3",
+            "mean_probability": 0.24215777488120022,
+            "observed_frequency": 0.14414414414414414,
+            "rows": 222
+          },
+          {
+            "bin": "0.3-0.4",
+            "mean_probability": 0.34470519104973557,
+            "observed_frequency": 0.16981132075471697,
+            "rows": 106
+          },
+          {
+            "bin": "0.4-0.5",
+            "mean_probability": 0.4424076403768998,
+            "observed_frequency": 0.3333333333333333,
+            "rows": 42
+          },
+          {
+            "bin": "0.5-0.6",
+            "mean_probability": 0.542814123204435,
+            "observed_frequency": 0.625,
+            "rows": 16
+          },
+          {
+            "bin": "0.6-0.7",
+            "mean_probability": 0.6629306859370372,
+            "observed_frequency": 0.5,
+            "rows": 6
+          },
+          {
+            "bin": "0.7-0.8",
+            "mean_probability": 0.7441892344554755,
+            "observed_frequency": 0.0,
+            "rows": 4
+          },
+          {
+            "bin": "0.8-0.9",
+            "mean_probability": 0.8275893157553758,
+            "observed_frequency": 0.0,
+            "rows": 1
+          },
+          {
+            "bin": "0.9-1.0",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          }
+        ]
+      },
+      "history_only_warning_raw": {
+        "average_precision": 0.1986767049853367,
+        "brier": 0.014740872255156856,
+        "brier_skill_vs_climatology": {
+          "interval_95": [
+            0.10769804313067505,
+            0.31815929441709156
+          ],
+          "sessions": 21,
+          "value": 0.1875551290978914
+        },
+        "brier_skill_vs_naive": {
+          "interval_95": [
+            0.039100919375760185,
+            0.14093357835858858
+          ],
+          "sessions": 21,
+          "value": 0.08504935315786388
+        },
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            0.01767595552618587,
+            0.1188665705588397
+          ],
+          "sessions": 19,
+          "value": 0.06454175235340819
+        },
+        "precision_at_half": 0.475,
+        "recall_at_half": 0.08755760368663594,
+        "reliability": [
+          {
+            "bin": "0.0-0.1",
+            "mean_probability": 0.00426958449349591,
+            "observed_frequency": 0.009328943242395735,
+            "rows": 12756
+          },
+          {
+            "bin": "0.1-0.2",
+            "mean_probability": 0.14735222415272262,
+            "observed_frequency": 0.1596958174904943,
+            "rows": 263
+          },
+          {
+            "bin": "0.2-0.3",
+            "mean_probability": 0.24392211482002094,
+            "observed_frequency": 0.12295081967213115,
+            "rows": 122
+          },
+          {
+            "bin": "0.3-0.4",
+            "mean_probability": 0.3423228390244919,
+            "observed_frequency": 0.17333333333333334,
+            "rows": 75
+          },
+          {
+            "bin": "0.4-0.5",
+            "mean_probability": 0.43413105166543337,
+            "observed_frequency": 0.2647058823529412,
+            "rows": 34
+          },
+          {
+            "bin": "0.5-0.6",
+            "mean_probability": 0.5442166870238058,
+            "observed_frequency": 0.5714285714285714,
+            "rows": 21
+          },
+          {
+            "bin": "0.6-0.7",
+            "mean_probability": 0.6368955063819876,
+            "observed_frequency": 0.5,
+            "rows": 8
+          },
+          {
+            "bin": "0.7-0.8",
+            "mean_probability": 0.7687249958545515,
+            "observed_frequency": 0.5,
+            "rows": 6
+          },
+          {
+            "bin": "0.8-0.9",
+            "mean_probability": 0.8491994202366207,
+            "observed_frequency": 0.0,
+            "rows": 4
+          },
+          {
+            "bin": "0.9-1.0",
+            "mean_probability": 0.9319115935384317,
+            "observed_frequency": 0.0,
+            "rows": 1
+          }
+        ]
+      },
+      "naive_warning": {
+        "average_precision": 0.010313323184442816,
+        "brier": 0.01611111190099002,
+        "brier_skill_vs_climatology": {
+          "interval_95": [
+            0.0375276800201145,
+            0.2416460027641623
+          ],
+          "sessions": 21,
+          "value": 0.11203421331392716
+        },
+        "brier_skill_vs_naive": {
+          "interval_95": [
+            0.0,
+            0.0
+          ],
+          "sessions": 21,
+          "value": 0.0
+        },
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            -0.22128648669516643,
+            -0.1045634488765567
+          ],
+          "sessions": 19,
+          "value": -0.15981379288694247
+        },
+        "precision_at_half": null,
+        "recall_at_half": 0.0,
+        "reliability": [
+          {
+            "bin": "0.0-0.1",
+            "mean_probability": 0.016587695332053776,
+            "observed_frequency": 0.0163280662151994,
+            "rows": 13290
+          },
+          {
+            "bin": "0.1-0.2",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.2-0.3",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.3-0.4",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.4-0.5",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.5-0.6",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.6-0.7",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.7-0.8",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.8-0.9",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          },
+          {
+            "bin": "0.9-1.0",
+            "mean_probability": null,
+            "observed_frequency": null,
+            "rows": 0
+          }
+        ]
+      },
+      "persistence_warning_score": {
+        "average_precision": 0.1385136307985957,
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            0.0,
+            0.0
+          ],
+          "sessions": 19,
+          "value": 0.0
+        },
+        "score_semantics": "negative past rate; ranking score, not probability"
+      },
+      "positive_rows": 217,
+      "rows": 13290,
+      "sessions": 21,
+      "target": "next 5 s mean delivered rate below threshold; not a stall or threshold crossing",
+      "trailing_mean_warning_score": {
+        "average_precision": 0.1424989468682162,
+        "paired_session_ap_difference_vs_continuous_persistence": {
+          "excluded_all_positive_sessions": [],
+          "excluded_no_positive_sessions": [
+            "ses_eb4868190ab5",
+            "ses_fce1957b3da7"
+          ],
+          "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+          "interval_95": [
+            -0.06451220947447787,
+            0.08286931937101522
+          ],
+          "sessions": 19,
+          "value": 0.00609484330488951
+        },
+        "score_semantics": "negative past rate; ranking score, not probability"
+      }
+    },
+    "history_only_warning": {
+      "average_precision": 0.6608985991573325,
+      "brier": 0.030410581691803783,
+      "brier_skill_vs_climatology": {
+        "interval_95": [
+          0.3314020670339873,
+          0.5663156432934008
+        ],
+        "sessions": 21,
+        "value": 0.4658997707953012
+      },
+      "brier_skill_vs_naive": {
+        "interval_95": [
+          0.24490977948002698,
+          0.4485438007728811
+        ],
+        "sessions": 21,
+        "value": 0.34745502659380834
+      },
+      "paired_session_ap_difference_vs_continuous_persistence": {
+        "excluded_all_positive_sessions": [],
+        "excluded_no_positive_sessions": [
+          "ses_eb4868190ab5",
+          "ses_fce1957b3da7"
+        ],
+        "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+        "interval_95": [
+          0.24400860374468566,
+          0.41255009064922554
+        ],
+        "sessions": 19,
+        "value": 0.3264951279936145
+      },
+      "precision_at_half": 0.726878612716763,
+      "recall_at_half": 0.5305907172995781,
+      "reliability": [
+        {
+          "bin": "0.0-0.1",
+          "mean_probability": 0.010050915956729991,
+          "observed_frequency": 0.00843665174968821,
+          "rows": 13631
+        },
+        {
+          "bin": "0.1-0.2",
+          "mean_probability": 0.14193953084960662,
+          "observed_frequency": 0.14675767918088736,
+          "rows": 586
+        },
+        {
+          "bin": "0.2-0.3",
+          "mean_probability": 0.24612243402471232,
+          "observed_frequency": 0.21798365122615804,
+          "rows": 367
+        },
+        {
+          "bin": "0.3-0.4",
+          "mean_probability": 0.34818893435706233,
+          "observed_frequency": 0.29365079365079366,
+          "rows": 252
+        },
+        {
+          "bin": "0.4-0.5",
+          "mean_probability": 0.4456038609532639,
+          "observed_frequency": 0.4838709677419355,
+          "rows": 186
+        },
+        {
+          "bin": "0.5-0.6",
+          "mean_probability": 0.5500960920660745,
+          "observed_frequency": 0.6125,
+          "rows": 160
+        },
+        {
+          "bin": "0.6-0.7",
+          "mean_probability": 0.6492880810603349,
+          "observed_frequency": 0.7134831460674157,
+          "rows": 178
+        },
+        {
+          "bin": "0.7-0.8",
+          "mean_probability": 0.7508608557281686,
+          "observed_frequency": 0.711864406779661,
+          "rows": 177
+        },
+        {
+          "bin": "0.8-0.9",
+          "mean_probability": 0.8462774989832357,
+          "observed_frequency": 0.8670886075949367,
+          "rows": 158
+        },
+        {
+          "bin": "0.9-1.0",
+          "mean_probability": 0.9227894185136457,
+          "observed_frequency": 0.7894736842105263,
+          "rows": 19
+        }
+      ]
+    },
+    "history_only_warning_raw": {
+      "average_precision": 0.6648367395113791,
+      "brier": 0.030633572805798998,
+      "brier_skill_vs_climatology": {
+        "interval_95": [
+          0.31802964413492596,
+          0.5720864918331083
+        ],
+        "sessions": 21,
+        "value": 0.4619833838513594
+      },
+      "brier_skill_vs_naive": {
+        "interval_95": [
+          0.228425341026335,
+          0.4572847766639744
+        ],
+        "sessions": 21,
+        "value": 0.34267012204885383
+      },
+      "paired_session_ap_difference_vs_continuous_persistence": {
+        "excluded_all_positive_sessions": [],
+        "excluded_no_positive_sessions": [
+          "ses_eb4868190ab5",
+          "ses_fce1957b3da7"
+        ],
+        "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+        "interval_95": [
+          0.24400860374468566,
+          0.41255009064922554
+        ],
+        "sessions": 19,
+        "value": 0.3264951279936145
+      },
+      "precision_at_half": 0.7117962466487936,
+      "recall_at_half": 0.560126582278481,
+      "reliability": [
+        {
+          "bin": "0.0-0.1",
+          "mean_probability": 0.005027210902847212,
+          "observed_frequency": 0.011705088858753836,
+          "rows": 14011
+        },
+        {
+          "bin": "0.1-0.2",
+          "mean_probability": 0.14807061086822684,
+          "observed_frequency": 0.19143576826196473,
+          "rows": 397
+        },
+        {
+          "bin": "0.2-0.3",
+          "mean_probability": 0.24572540433317813,
+          "observed_frequency": 0.2457627118644068,
+          "rows": 236
+        },
+        {
+          "bin": "0.3-0.4",
+          "mean_probability": 0.34767312078292784,
+          "observed_frequency": 0.3016759776536313,
+          "rows": 179
+        },
+        {
+          "bin": "0.4-0.5",
+          "mean_probability": 0.44534002462051586,
+          "observed_frequency": 0.4482758620689655,
+          "rows": 145
+        },
+        {
+          "bin": "0.5-0.6",
+          "mean_probability": 0.5512060764222123,
+          "observed_frequency": 0.5137614678899083,
+          "rows": 109
+        },
+        {
+          "bin": "0.6-0.7",
+          "mean_probability": 0.6514386072480354,
+          "observed_frequency": 0.626984126984127,
+          "rows": 126
+        },
+        {
+          "bin": "0.7-0.8",
+          "mean_probability": 0.7567923787304229,
+          "observed_frequency": 0.7307692307692307,
+          "rows": 156
+        },
+        {
+          "bin": "0.8-0.9",
+          "mean_probability": 0.8496761753751233,
+          "observed_frequency": 0.7202380952380952,
+          "rows": 168
+        },
+        {
+          "bin": "0.9-1.0",
+          "mean_probability": 0.938190633563406,
+          "observed_frequency": 0.8609625668449198,
+          "rows": 187
+        }
+      ]
+    },
+    "naive_warning": {
+      "average_precision": 0.18729691803637447,
+      "brier": 0.04660304336276608,
+      "brier_skill_vs_climatology": {
+        "interval_95": [
+          0.10177717500550801,
+          0.2405255487626123
+        ],
+        "sessions": 21,
+        "value": 0.18151200151497315
+      },
+      "brier_skill_vs_naive": {
+        "interval_95": [
+          0.0,
+          0.0
+        ],
+        "sessions": 21,
+        "value": 0.0
+      },
+      "paired_session_ap_difference_vs_continuous_persistence": {
+        "excluded_all_positive_sessions": [],
+        "excluded_no_positive_sessions": [
+          "ses_eb4868190ab5",
+          "ses_fce1957b3da7"
+        ],
+        "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+        "interval_95": [
+          -0.06566360120522409,
+          -0.007071212626438625
+        ],
+        "sessions": 19,
+        "value": -0.03736866098111075
+      },
+      "precision_at_half": null,
+      "recall_at_half": 0.0,
+      "reliability": [
+        {
+          "bin": "0.0-0.1",
+          "mean_probability": 0.016587695332053776,
+          "observed_frequency": 0.0163280662151994,
+          "rows": 13290
+        },
+        {
+          "bin": "0.1-0.2",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        },
+        {
+          "bin": "0.2-0.3",
+          "mean_probability": 0.29041681891681664,
+          "observed_frequency": 0.4766536964980545,
+          "rows": 1028
+        },
+        {
+          "bin": "0.3-0.4",
+          "mean_probability": 0.3084558092667918,
+          "observed_frequency": 0.17263610315186245,
+          "rows": 1396
+        },
+        {
+          "bin": "0.4-0.5",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        },
+        {
+          "bin": "0.5-0.6",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        },
+        {
+          "bin": "0.6-0.7",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        },
+        {
+          "bin": "0.7-0.8",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        },
+        {
+          "bin": "0.8-0.9",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        },
+        {
+          "bin": "0.9-1.0",
+          "mean_probability": null,
+          "observed_frequency": null,
+          "rows": 0
+        }
+      ]
+    },
+    "persistence_warning_score": {
+      "average_precision": 0.26063613182709844,
+      "paired_session_ap_difference_vs_continuous_persistence": {
+        "excluded_all_positive_sessions": [],
+        "excluded_no_positive_sessions": [
+          "ses_eb4868190ab5",
+          "ses_fce1957b3da7"
+        ],
+        "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+        "interval_95": [
+          0.0,
+          0.0
+        ],
+        "sessions": 19,
+        "value": 0.0
+      },
+      "score_semantics": "negative past rate; ranking score, not probability"
+    },
+    "positive_rows": 948,
+    "rows": 15714,
+    "sessions": 21,
+    "target": "next 5 s mean delivered rate below threshold; not a stall or threshold crossing",
+    "trailing_mean_warning_score": {
+      "average_precision": 0.4770690482190886,
+      "paired_session_ap_difference_vs_continuous_persistence": {
+        "excluded_all_positive_sessions": [],
+        "excluded_no_positive_sessions": [
+          "ses_eb4868190ab5",
+          "ses_fce1957b3da7"
+        ],
+        "interpretation": "descriptive conditional-on-fitted-predictions session mean AP difference",
+        "interval_95": [
+          0.0480370566658668,
+          0.19203197890310858
+        ],
+        "sessions": 19,
+        "value": 0.11954721309528085
+      },
+      "score_semantics": "negative past rate; ranking score, not probability"
+    }
+  },
+  "warning_calibration_status_rows": {
+    "combined": {
+      "sigmoid_inner_session_folds": 15714
+    },
+    "history_only": {
+      "sigmoid_inner_session_folds": 15714
+    }
+  },
+  "warning_threshold_mbps": 1.5
+}

@@ -1,0 +1,399 @@
+{
+  "trials": 3,
+  "cases": 27,
+  "runs": 81,
+  "pass_1": 0.8765432098765432,
+  "pass_1_trial_level_interval_95": [
+    0.7846553019524447,
+    0.9391797507486828
+  ],
+  "pass_hat_3": 0.8518518518518519,
+  "pass_hat_3_interval_95": [
+    0.6626891359757556,
+    0.9581126035262326
+  ],
+  "pass_at_3": 0.8888888888888888,
+  "consistent_pattern_sets": 0.8148148148148148,
+  "consistent_pattern_sets_interval_95": [
+    0.6191701209060054,
+    0.9369999934623232
+  ],
+  "usd_per_trial": [
+    0.267109,
+    0.547278,
+    0.592817
+  ],
+  "usd_total": 1.4072040000000001,
+  "usd_per_successful_run": 0.019819774647887325,
+  "by_family": {
+    "application_idle": {
+      "cases": 3,
+      "pass_all": 3,
+      "trials": 9,
+      "successes": 9
+    },
+    "cell_change_with_rate_drop": {
+      "cases": 2,
+      "pass_all": 2,
+      "trials": 6,
+      "successes": 6
+    },
+    "cell_change_without_rate_drop": {
+      "cases": 2,
+      "pass_all": 2,
+      "trials": 6,
+      "successes": 6
+    },
+    "clean_control": {
+      "cases": 3,
+      "pass_all": 3,
+      "trials": 9,
+      "successes": 9
+    },
+    "misleading_string": {
+      "cases": 3,
+      "pass_all": 3,
+      "trials": 9,
+      "successes": 9
+    },
+    "missing_metrics": {
+      "cases": 3,
+      "pass_all": 3,
+      "trials": 9,
+      "successes": 9
+    },
+    "rate_drop_with_radio_change": {
+      "cases": 4,
+      "pass_all": 2,
+      "trials": 12,
+      "successes": 6
+    },
+    "stable_radio_rate_drop": {
+      "cases": 3,
+      "pass_all": 2,
+      "trials": 9,
+      "successes": 6
+    },
+    "tool_failure": {
+      "cases": 4,
+      "pass_all": 3,
+      "trials": 12,
+      "successes": 11
+    }
+  },
+  "failed_check_counts": {
+    "completed": 1,
+    "claims_verified": 1,
+    "required_patterns": 3,
+    "no_forbidden_pattern": 0
+  },
+  "per_case": [
+    {
+      "case_id": "case_1646e3bce2bb19ea",
+      "family": "rate_drop_with_radio_change",
+      "source_session_id": "ses_3e3a704972f8",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_1c0b146d64aacaec",
+      "family": "misleading_string",
+      "source_session_id": "ses_3e3a704972f8",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_2262ff2b72efad0f",
+      "family": "application_idle",
+      "source_session_id": "ses_14cc2e553380",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": false,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_24e528cf0edbd1a5",
+      "family": "tool_failure",
+      "source_session_id": "ses_3e3a704972f8",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_2582557b8475cb31",
+      "family": "misleading_string",
+      "source_session_id": "ses_14cc2e553380",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_2a119756dc45e535",
+      "family": "stable_radio_rate_drop",
+      "source_session_id": "ses_14cc2e553380",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_2f1cea631247f60f",
+      "family": "rate_drop_with_radio_change",
+      "source_session_id": "ses_5cae83b6f6a7",
+      "trials": 3,
+      "successes": 0,
+      "pass_all": false,
+      "pass_any": false,
+      "consistent_patterns": true,
+      "failed_checks": [
+        "required_patterns"
+      ]
+    },
+    {
+      "case_id": "case_3625eb50f1a5e294",
+      "family": "rate_drop_with_radio_change",
+      "source_session_id": "ses_14cc2e553380",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_37f19e253045027b",
+      "family": "tool_failure",
+      "source_session_id": "ses_5cae83b6f6a7",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_441827b4fc931078",
+      "family": "cell_change_with_rate_drop",
+      "source_session_id": "ses_3e3a704972f8",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_80627831f6ae9fef",
+      "family": "misleading_string",
+      "source_session_id": "ses_5cae83b6f6a7",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": false,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_82f37c082f997767",
+      "family": "cell_change_without_rate_drop",
+      "source_session_id": "ses_14cc2e553380",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_99633f216ae03679",
+      "family": "stable_radio_rate_drop",
+      "source_session_id": "ses_5cae83b6f6a7",
+      "trials": 3,
+      "successes": 0,
+      "pass_all": false,
+      "pass_any": false,
+      "consistent_patterns": true,
+      "failed_checks": [
+        "required_patterns"
+      ]
+    },
+    {
+      "case_id": "case_a0e27977ad4000ff",
+      "family": "missing_metrics",
+      "source_session_id": "ses_5cae83b6f6a7",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_a2e41f49df1d6557",
+      "family": "cell_change_without_rate_drop",
+      "source_session_id": "ses_3e3a704972f8",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_c0145a25ddb96752",
+      "family": "tool_failure",
+      "source_session_id": "ses_5cae83b6f6a7",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_c20c7543f12171d6",
+      "family": "cell_change_with_rate_drop",
+      "source_session_id": "ses_14cc2e553380",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_c35523e8cd31315a",
+      "family": "clean_control",
+      "source_session_id": "ses_5cae83b6f6a7",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_c4454718fd275e05",
+      "family": "missing_metrics",
+      "source_session_id": "ses_3e3a704972f8",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_c5ccf48dafe96324",
+      "family": "clean_control",
+      "source_session_id": "ses_14cc2e553380",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_d1a97b162f872e00",
+      "family": "tool_failure",
+      "source_session_id": "ses_14cc2e553380",
+      "trials": 3,
+      "successes": 2,
+      "pass_all": false,
+      "pass_any": true,
+      "consistent_patterns": false,
+      "failed_checks": [
+        "claims_verified",
+        "completed"
+      ]
+    },
+    {
+      "case_id": "case_e022fd8d90963d11",
+      "family": "application_idle",
+      "source_session_id": "ses_3e3a704972f8",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_e5d4f4f2df01f035",
+      "family": "stable_radio_rate_drop",
+      "source_session_id": "ses_3e3a704972f8",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_e67a147f1dffbd01",
+      "family": "rate_drop_with_radio_change",
+      "source_session_id": "ses_5cae83b6f6a7",
+      "trials": 3,
+      "successes": 0,
+      "pass_all": false,
+      "pass_any": false,
+      "consistent_patterns": false,
+      "failed_checks": [
+        "required_patterns"
+      ]
+    },
+    {
+      "case_id": "case_e9a07040a7e8ebe9",
+      "family": "clean_control",
+      "source_session_id": "ses_3e3a704972f8",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_ec7d8a211b712c2f",
+      "family": "missing_metrics",
+      "source_session_id": "ses_14cc2e553380",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "case_f37fd16996820574",
+      "family": "application_idle",
+      "source_session_id": "ses_5cae83b6f6a7",
+      "trials": 3,
+      "successes": 3,
+      "pass_all": true,
+      "pass_any": true,
+      "consistent_patterns": false,
+      "failed_checks": []
+    }
+  ],
+  "interval_note": "Clopper and Pearson over cases. pass^1 over runs treats repeated runs of a case as independent and is optimistic. Cases come from three source sessions."
+}

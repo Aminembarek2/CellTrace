@@ -1,0 +1,10 @@
+runtime:
+  provider: openrouter
+  enable_live_calls: false
+  model_id: deepseek/deepseek-v4.1-flash
+  model_effort: high
+  verified_rate_card: configs/rate_cards/deepseek_deepseek-v4.1-flash.yaml
+  verified_endpoint_record: artifacts/public/environment/openrouter_metadata/deepseek_deepseek-v4.1-flash.json
+  verified_capability_record: null
+  run_store: artifacts/private/openrouter/runs.sqlite3
+  checkpoint_store: artifacts/private/openrouter/checkpoints.sqlite3
